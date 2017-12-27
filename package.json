@@ -10,7 +10,8 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "mock":"json-server ./static/mock/mock.js -r ./static/mock/routes.json -p 9000"
   },
   "dependencies": {
     "vue": "^2.5.2",
