@@ -5,7 +5,7 @@
             <dd>首页</dd>
         </dl>
         <dl>
-            <dt class="yo-ico">&#xe606;</dt>
+            <dt class="yo-ico">&#xe601;</dt>
             <dd>全部兼职</dd>
         </dl>
         <dl>
@@ -13,7 +13,7 @@
             <dd>智学堂</dd>
         </dl>
         <dl>
-            <dt class="yo-ico">&#xe502;</dt>
+            <dt class="yo-ico">&#xe503;</dt>
             <dd>消息</dd>
         </dl>
         <dl>
