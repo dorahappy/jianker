@@ -1,0 +1,36 @@
+.app-head{
+    @include flexbox();
+    height:0.44rem;
+    width:100%;
+   div {
+      font-size: .16rem;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      &:first-child {
+        width: .8rem;
+      }
+      &:nth-child(2) {
+        @include flex();
+        i {
+          display: block;
+          width: .2rem;
+          height: .2rem;
+          line-height: .2rem;
+          padding-left:0.05rem;
+        }
+        > div {
+          @include border(1px, #ccc, solid, 10px);
+          height: .30rem;
+          width: 100%;
+          input {
+            background: transparent;
+            border: 0;
+          }
+        }
+      }
+      &:last-child {
+        width: .8rem;
+      }
+    }
+}
