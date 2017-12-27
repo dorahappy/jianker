@@ -1,22 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <app-header></app-header>
+    <app-banner></app-banner>
   </div>
 </template>
 
 <script>
+import AppHeader from './components/index/AppHeader'
+import AppBanner from './components/index/AppBanner'
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    AppHeader,AppBanner
+  }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>
