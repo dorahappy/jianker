@@ -10,13 +10,7 @@
 <script>
 export default {
     name:'app-banner',
-    mounted(){
-        fetch("http://localhost:5000/api/position/list")
-            .then((response)=>response.json())
-            .then((res)=>{
-                console.log(res)
-            })
-    }
+ 
 }
 </script>
 <style lang='scss' scoped>
