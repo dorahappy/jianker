@@ -1,6 +1,6 @@
 <template>
     <div class="app-register">
-        register注册
+        <div class="header"></div>
         
     </div>
 </template>
@@ -21,5 +21,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    .app-register{
+        .header{
+            
+        }
+    }
 </style>
