@@ -1,0 +1,61 @@
+.list {
+    //@include flex();
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    height:3.2rem;
+    div {
+      height: .3rem;
+      line-height: .3rem;
+      padding-left: .1rem;
+    }
+    > ul {
+      @include flex();
+      overflow: scroll;
+      width: 100%;
+      padding: .1rem;
+       > li {
+        height: .8rem;
+        background: #f9efd4;
+        @include border(1px, #000, solid, .4rem);
+        margin-top: .05rem;
+        > ul {
+          @include flexbox();
+          height: 100%;
+          > li {
+            &:first-child {
+              width: .8rem;
+              @include border(1px, #000, solid, .4rem);
+              line-height: .8rem;
+              text-align: center;
+              font-size: .18rem;
+            }
+            &:nth-child(2) {
+              padding-left: .1rem;
+              @include flex();
+              @include flexbox();
+              @include flex-direction(column);
+              @include justify-content(center);
+              h1 {
+                font-size: .18rem;
+                @include ellipsis();
+              }
+              h2, h3 {
+                font-weight: 100;
+              }
+            }
+            &:last-child {
+              width: .8rem;
+              text-align: center;
+              line-height: .8rem;
+              font-size: .18rem;
+              color: #f00;
+            }
+            h1 {
+
+            }
+          }
+        }
+      }
+    }
+  }
