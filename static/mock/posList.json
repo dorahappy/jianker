@@ -8,7 +8,7 @@
       "subjects": [
         {
           "id": 1,
-          "postype": "客服1",
+          "postype": "客服",
           "posname": "世界500强客服，包吃住~",
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
@@ -18,7 +18,7 @@
         },
         {
           "id": 2,
-          "postype": "客服1",
+          "postype": "其他",
           "posname": "世界500强客服，包吃住~",
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
@@ -28,7 +28,7 @@
         },
         {
           "id": 3,
-          "postype": "客服1",
+          "postype": "服务业",
           "posname": "世界500强客服，包吃住~",
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
@@ -38,7 +38,37 @@
         },
         {
           "id": 4,
-          "postype": "客服1",
+          "postype": "学生",
+          "posname": "世界500强客服，包吃住~",
+          "city": "北京",
+          "duration": "2017-12-15~2017-12-18",
+          "createtime": "1小时前",
+          "companytype": "知名企业",
+          "salary": "365元/日"
+        },
+        {
+          "id": 5,
+          "postype": "学生",
+          "posname": "世界500强客服，包吃住~",
+          "city": "北京",
+          "duration": "2017-12-15~2017-12-18",
+          "createtime": "1小时前",
+          "companytype": "知名企业",
+          "salary": "365元/日"
+        },
+        {
+          "id": 6,
+          "postype": "学生",
+          "posname": "世界500强客服，包吃住~",
+          "city": "北京",
+          "duration": "2017-12-15~2017-12-18",
+          "createtime": "1小时前",
+          "companytype": "知名企业",
+          "salary": "365元/日"
+        },
+        {
+          "id": 7,
+          "postype": "学生",
           "posname": "世界500强客服，包吃住~",
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",

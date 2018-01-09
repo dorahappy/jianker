@@ -23,7 +23,9 @@ export default {
 <style lang="scss" scoped>
     .app-register{
         .header{
-            
+            width: 100%;
+            height: .44rem;
+            background: #fd6c23;
         }
     }
 </style>

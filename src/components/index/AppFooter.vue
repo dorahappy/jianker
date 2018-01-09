@@ -1,6 +1,6 @@
 <template>
     <div class="app-footer">
-        <router-link :to="{name: 'home'}" tag="dl">
+        <router-link :to="{name: 'home'}" tag="dl" class="active">
             <dt class="yo-ico">&#xe604;</dt>
             <dd>首页</dd>
         </router-link>

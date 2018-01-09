@@ -7,9 +7,12 @@ import store from './store'
 
 import "@/style/usage/app.scss"
 
+import '../node_modules/swiper/dist/css/swiper.min.css'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,
