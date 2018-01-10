@@ -1,0 +1,95 @@
+.app-mine-nav{
+    height:152px;
+    background:#fff;
+   margin-top:10px;
+   .app-aboutme{
+       ul{
+          li{
+               height:50px;
+               margin-left:10px;
+               font-size:16px;
+               color:#333333;
+               @include flexbox();
+               align-items:center;
+               justify-content:space-between;
+               p{
+                   @include flexbox();
+                   span{
+                       margin-right:10px;
+                   }
+               }
+           }
+           li:nth-child(1){
+               border-bottom:1px solid #e5e5e5;
+               span{
+                   display: block;
+                   width:18px;
+                   height:18px;
+                   background:url(/static/img/mine/mine_01.png) no-repeat -72px 0px; 
+                   background-size:96px 205px;
+               }
+           } 
+            li:nth-child(2){
+               border-bottom:1px solid #e5e5e5;
+               span{
+                   display: block;
+                   width:18px;
+                   height:18px;
+                   background:url(/static/img/mine/mine_01.png) no-repeat -72px -43px; 
+                   background-size:96px 205px;
+               }
+           }
+           li:nth-child(3){
+               span{
+                   display: block;
+                   width:18px;
+                   height:18px;
+                   background:url(/static/img/mine/mine_01.png) no-repeat -72px -86px; 
+                   background-size:96px 205px;
+               }
+           }
+       }
+       
+   }
+   .app-others{
+        background:#fff;
+        margin-top:10px;
+        height:101px;
+        ul{
+          li{
+               height:50px;
+               margin-left:10px;
+               font-size:16px;
+               color:#333333;
+               @include flexbox();
+               align-items:center;
+               justify-content:space-between;
+               p{
+                   @include flexbox();
+                   span{
+                       margin-right:10px;
+                   }
+               }
+           }
+           li:nth-child(1){
+               border-bottom:1px solid #e5e5e5;
+               span{
+                   display: block;
+                   width:18px;
+                   height:18px;
+                   background:url(/static/img/mine/mine_01.png) no-repeat -72px -125px; 
+                   background-size:96px 205px;
+               }
+           } 
+            li:nth-child(2){
+               span{
+                   display: block;
+                   width:18px;
+                   height:18px;
+                   background:url(/static/img/mine/mine_01.png) no-repeat -72px -171px; 
+                   background-size:96px 205px;
+               }
+           }
+        }
+   }
+}

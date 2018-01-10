@@ -1,16 +1,24 @@
 <template>
     <div class="app-mine">
-        mine我的
+        <AppMineHead></AppMineHead>
+        <AppMineLogin></AppMineLogin>
+        <AppMineNav></AppMineNav>
     </div>
 </template>
 
 <script>
+	import AppMineHead from './AppMineHead'
+	import AppMineLogin from './AppMineLogin'
+	import AppMineNav from './AppMineNav'
 export default {
     name: 'app-mine',
+    components:{
+    	AppMineHead,AppMineLogin,AppMineNav
+    }
   
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
