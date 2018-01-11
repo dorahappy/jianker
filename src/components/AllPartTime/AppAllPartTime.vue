@@ -1,12 +1,16 @@
 <template>
     <div class="app-allparttime">
-        allparttime全部兼职
+        <AppAllPartTimeHead></AppAllPartTimeHead>
     </div>
 </template>
 
 <script>
+	import AppAllPartTimeHead from './AppAllPartTimeHead'
 export default {
     name: 'app-allparttime',
+    components:{
+    	AppAllPartTimeHead
+    }
   
 }
 </script>

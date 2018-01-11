@@ -1,0 +1,18 @@
+.app-allparttime-head{
+    height:0.64rem;
+    width:100%;
+    background:#FD6C23;
+    ul{
+        height:100%;
+        width:100%;
+       @include flexbox();
+       align-items:center;
+       justify-content: space-between;
+       padding:0 0.1rem;
+       li{
+           font-size:16px;
+           color:#fff;
+       }
+    }
+    
+}
