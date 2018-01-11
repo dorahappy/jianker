@@ -7,10 +7,16 @@
 
 <script>
 import AppFooter from './components/index/AppFooter'
+import {mapstate} from 'vuex'
 export default {
     name: 'app',
     components:{
       AppFooter
+    },
+    data:function(){
+        return {
+
+        }
     }
 }
 </script>

@@ -5,6 +5,9 @@
                 <img :src="banner.imgUrl" :alt="banner.title" :title="banner.title">
             </div>
         </div>
+        <div class="swiper-pagination">
+            
+        </div>
     </div>
 </template>
 <script>

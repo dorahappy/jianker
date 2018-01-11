@@ -6,7 +6,8 @@ Vue.use(Vuex)
 
 const state = {
     count: 0,
-    num: 10
+    num: 10,
+    isLogin: false
 }
 
 const mutations = {
