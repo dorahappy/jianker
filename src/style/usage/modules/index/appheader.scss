@@ -1,4 +1,15 @@
 .app-head{
+  .head-shadow{
+    height:0.44rem;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background:#FD6C23;
+  }
+  
+  .head-box{
     @include flexbox();
     height:0.44rem;
     width:100%;
@@ -42,4 +53,6 @@
         width: .8rem;
       }
     }
+  }
+    
 }
