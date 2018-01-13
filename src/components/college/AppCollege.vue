@@ -3,7 +3,7 @@
         <app-header></app-header>
         <app-banner></app-banner>
         <div class="nav-head">
-            <div class="active">兼职干活</div>
+            <div class="active">兼职干货</div>
             <div>兼职圈</div>
         </div>
         <div class="content">
