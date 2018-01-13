@@ -13,7 +13,8 @@
 export default {
     name: 'app-allparttime',
     components:{
-    	AppAllPartTimeHead,AppAllPartTimeNav,AppAllPartTimeContent
+        AppAllPartTimeHead,AppAllPartTimeNav,AppAllPartTimeContent
+    },
     mounted(){
 
     },
