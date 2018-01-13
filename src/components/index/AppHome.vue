@@ -41,6 +41,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.app-home{
+	box-sizing:border-box;
+	flex-direction: column;
 	.appStart{
 		z-index:999;
 		width:100%;
@@ -52,4 +55,8 @@ export default {
 		background:url(/static/img/index/start.png);
 		background-size:cover;
 	}
+
+}
+	
+	
 </style>

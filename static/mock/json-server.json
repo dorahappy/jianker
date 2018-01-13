@@ -1,9 +1,0 @@
-
-{
-    "host": "192.168.253.1",
-    "port": "9000",
-    "watch": false,
-    "delay": 500,
-    "quiet": true,
-    "routes": "./routes.json"
-}

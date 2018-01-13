@@ -14,14 +14,8 @@ export default {
     name: 'app-allparttime',
     components:{
     	AppAllPartTimeHead,AppAllPartTimeNav,AppAllPartTimeContent
-    mounted(){
-
-    },
-    computed:{
-        
-    },
-    methods:{
     }
+   
 }
 </script>
 

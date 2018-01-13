@@ -1,0 +1,84 @@
+{
+    "errcode": 0,
+    "errmsg": "",
+    "data": {
+      "start": 0,
+      "count": 10,
+      "total": 120,
+      "unread":122,
+      "subjects": [
+        {
+          "id": 1,
+          "pub": "北京科技有限公司",
+          "imgUrl": "./static/img/message/img_01.jpg",
+          "createtime": "12月25日   14:30",
+          "idUnread":2,
+          "admission":"true",
+          "lately": "恭喜您被成功录用，请于2017年12月27日前来报到"
+        },
+        {
+          "id": 2,
+          "pub": "北京机器人有限公司",
+          "imgUrl": "./static/img/message/img_01.jpg",
+          "createtime": "14:30",
+          "idUnread":2,
+          "admission":"false",
+          "lately": "很遗憾，尽管你十分优秀，但是你的能力与我公司的兼职职位不相符"
+        },
+         {
+          "id": 3,
+          "pub": "北京科技有限公司",
+          "imgUrl": "./static/img/message/img_01.jpg",
+          "createtime": "12月25日  14:30",
+          "idUnread":2,
+          "admission":"true",
+          "lately": "恭喜您被成功录用，请于2017年12月27日前来报到"
+        },
+        {
+          "id": 4,
+          "pub": "北京机器人有限公司",
+          "imgUrl": "./static/img/message/img_01.jpg",
+          "createtime": "14:30",
+          "idUnread":2,
+          "admission":"false",
+          "lately": "很遗憾，尽管你十分优秀，但是你的能力与我公司的兼职职位不相符"
+        },
+        {
+          "id": 5,
+          "pub": "北京科技有限公司",
+          "imgUrl": "./static/img/message/img_01.jpg",
+          "createtime": "12月25日  14:30",
+          "idUnread":2,
+          "admission":"ture",
+          "lately": "恭喜您被成功录用，请于2017年12月27日前来报到"
+        },
+        {
+          "id": 6,
+          "pub": "北京机器人有限公司",
+          "imgUrl": "./static/img/message/img_01.jpg",
+          "createtime": "14:30",
+          "idUnread":2,
+          "admission":"false",
+          "lately": "很遗憾，尽管你十分优秀，但是你的能力与我公司的兼职职位不相符"
+        },
+        {
+          "id": 7,
+          "pub": "北京科技有限公司",
+          "imgUrl": "./static/img/message/img_01.jpg",
+          "createtime": "12月25日  14:30",
+          "idUnread":2,
+          "admission":"true",
+          "lately": "恭喜您被成功录用，请于2017年12月27日前来报到"
+        },
+        {
+          "id": 8,
+          "pub": "北京机器人有限公司",
+          "imgUrl": "./static/img/message/img_01.jpg",
+          "createtime": "14:30",
+          "idUnread":2,
+          "admission":"false",
+          "lately": "很遗憾，尽管你十分优秀，但是你的能力与我公司的兼职职位不相符"
+        }
+      ]
+    }
+}

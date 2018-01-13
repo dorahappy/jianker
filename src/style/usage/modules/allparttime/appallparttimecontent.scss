@@ -1,13 +1,16 @@
 .app-all-parttime-content {
-    z-index: -100;
+    //z-index: -100;
     background: #fff;
     width: 100%;
     @include flexbox();
+    //@include flex();
     @include flex-direction(column);
-    height:5.13rem;
+    position:absolute;
+    top:1.04rem;
+    bottom:0.5rem;
+    overflow:scroll;
     > ul {
-      @include flex();
-      overflow: scroll;
+      
       width: 100%;
        > li {
         padding: .1rem;
