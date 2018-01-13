@@ -2,7 +2,7 @@
   <header class="app-head">
 		<div class="head-shadow"></div>
 		<div class="head-box">
-			<div class="city">
+			<div class="city" @click="toCity">
 				<span>北京</span>
 				<i class="yo-ico">&#xf031</i>
 			</div>
@@ -22,7 +22,12 @@
 </template>
 <script>
 export default {
-  name:"app-head"
+	name:"app-head",
+	methods:{
+		toCity(){
+			this.$router.push({name:'city'})
+		}
+	}
 }
 </script>
 <style lang="scss">
