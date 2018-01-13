@@ -29,7 +29,6 @@ export default {
         .then((response)=>response.json())
         .then((res)=>{
             this.list = res.data.subjects
-            console.log(this.list)
         })
     }
 }

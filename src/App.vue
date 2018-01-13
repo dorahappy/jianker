@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <router-view></router-view>
-        <app-footer></app-footer>
+        <app-footer v-if="isNavShow"></app-footer>
     </div>
 </template>
 
@@ -15,8 +15,30 @@ export default {
     },
     data:function(){
         return {
-
+            isNavShow:true
         }
+    },
+    methods:{
+        NavShow(){
+            this.isNavShow = true
+        },
+        NavHide(){
+            this.isNavShow = false
+        },
+        routeChange(){
+            console.log('routeChange')
+            if(this.$route.path=='/register'||this.$route.path=='/login'){
+                this.NavHide()
+            }else{
+                this.NavShow()
+            }
+        }
+    },
+    created(){
+        this.routeChange()
+    },
+    watch: {
+        '$route': "routeChange"
     }
 }
 </script>
