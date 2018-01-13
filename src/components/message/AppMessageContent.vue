@@ -1,6 +1,6 @@
 <template>
     <div class="app-message-content">
-        <div class="messageList" v-for="list in lists">
+        <div class="messageList" v-for="list in lists" :key="list.id">
         	<div class="messageImg"></div>
         	<div class="messageInfo">
         		<ul>
