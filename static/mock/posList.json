@@ -13,7 +13,7 @@
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
           "createtime": "1小时前",
-          "companytype": "知名企业",
+          "companytype": "品牌企业",
           "salary": "365元/日"
         },
         {
@@ -23,7 +23,7 @@
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
           "createtime": "1小时前",
-          "companytype": "知名企业",
+          "companytype": "品牌企业",
           "salary": "365元/日"
         },
         {
@@ -33,7 +33,7 @@
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
           "createtime": "1小时前",
-          "companytype": "知名企业",
+          "companytype": "优质兼职",
           "salary": "365元/日"
         },
         {
@@ -43,37 +43,47 @@
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
           "createtime": "1小时前",
-          "companytype": "知名企业",
+          "companytype": "品牌企业",
           "salary": "365元/日"
         },
         {
           "id": 5,
-          "postype": "学生",
+          "postype": "销售",
           "posname": "世界500强客服，包吃住~",
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
           "createtime": "1小时前",
-          "companytype": "知名企业",
+          "companytype": "品牌企业",
           "salary": "365元/日"
         },
         {
           "id": 6,
-          "postype": "学生",
+          "postype": "模特",
           "posname": "世界500强客服，包吃住~",
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
           "createtime": "1小时前",
-          "companytype": "知名企业",
+          "companytype": "品牌企业",
           "salary": "365元/日"
         },
         {
           "id": 7,
-          "postype": "学生",
+          "postype": "临时工",
           "posname": "世界500强客服，包吃住~",
           "city": "北京",
           "duration": "2017-12-15~2017-12-18",
           "createtime": "1小时前",
-          "companytype": "知名企业",
+          "companytype": "品牌企业",
+          "salary": "365元/日"
+        },
+        {
+          "id": 8,
+          "postype": "文员",
+          "posname": "世界500强客服，包吃住~",
+          "city": "北京",
+          "duration": "2017-12-15~2017-12-18",
+          "createtime": "1小时前",
+          "companytype": "品牌企业",
           "salary": "365元/日"
         }
       ]

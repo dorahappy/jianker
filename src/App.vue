@@ -27,7 +27,7 @@ export default {
         },
         routeChange(){
             console.log('routeChange')
-            if(this.$route.path=='/register'||this.$route.path=='/login'){
+            if(this.$route.path=='/register'||this.$route.path=='/login'||this.$route.path=='/detail'){
                 this.NavHide()
             }else{
                 this.NavShow()

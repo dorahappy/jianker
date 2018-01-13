@@ -13,9 +13,13 @@
       font-size: 15px;
       font-weight: bold;
       @include border(0 0 1px 0, #e5e5e5, solid);
+      background: #fff;
+      z-index: 9;
     }
     > ul {
-      @include flex();
+      position: absolute;
+      top: 286px;
+      bottom: 50px;
       overflow: scroll;
       width: 100%;
        > li {
@@ -30,6 +34,30 @@
           @include justify-content(center);
           @include align-items(center);
           height: 100%;
+          .custom{
+            background: #fb9b9b;
+          }
+          .anything{
+            background: #00A74A;
+          }
+          .serve{
+            background: #C27400;
+          }
+          .stu{
+            background: #18B3EA;
+          }
+          .sell{
+            background: #FDAD23;
+          }
+          .model{
+            background: #B735DD;
+          }
+          .clerk{
+            background: #FCC573;
+          }
+          .part{
+            background: #689801;
+          }
           > li {
             &:first-child {
               width: .4rem;
@@ -39,7 +67,6 @@
               text-align: center;
               font-size: .1rem;
               color: #fff;
-              background: #fb9b9b;
             }
             &:nth-child(2) {
               padding-left: .1rem;

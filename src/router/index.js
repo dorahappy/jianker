@@ -7,6 +7,7 @@ import AppMessage from '@/components/message/AppMessage'
 import AppMine from '@/components/mine/AppMine'
 import AppRegister from '@/components/register/AppRegister'
 import AppLogin from '@/components/login/AppLogin'
+import AppDetail from '@/components/detail/AppDetail'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path:'/login',
       name:'login',
       component: AppLogin
+    },
+    {
+      path:'/detail',
+      name:'detail',
+      component: AppDetail
     }
   ]
 })

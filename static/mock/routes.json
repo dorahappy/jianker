@@ -1,3 +1,5 @@
 {
-    "/api/position/list": "/list"
+    "/api/position/list": "/list",
+    "/api/position/ptCircle": "/ptCircle",
+    "/api/position/listContent": "/listContent"
 }
