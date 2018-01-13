@@ -1,0 +1,51 @@
+.app-parttime-nav-service{
+    height:0.4rem;
+    width:25%;
+    background:#fff;
+    @include flexbox();
+    @include justify-content(space-between);
+    //line-height:0.4rem;
+    @include align-items(center);
+    >div{
+        height:0.26rem;
+        width:100%;
+        text-align: center;
+        border-right:0.01rem solid #999999;
+        font-size:14px;
+        color:#333333;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        position:relative;
+        >P{
+            height:0.26rem;
+            line-height: 0.26rem;
+        }
+        >i{
+            margin-left:-10px;
+            display: block;
+            width:0;
+            height:0;
+            margin-left:0.04rem;
+            border-top:0.05rem solid #666666;
+            border-right:0.04rem solid transparent;
+            border-left:0.04rem solid transparent;
+     
+        } 
+        
+        ul{
+           width:100%;
+           position:absolute;
+           top:0.26rem;
+           left:-0.06rem;
+           z-index:1000; 
+           background:#fff;
+           li{
+            height:0.26rem;
+            line-height:0.26rem;
+           }
+        }
+    }
+    
+
+}

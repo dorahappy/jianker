@@ -1,6 +1,5 @@
 <template>
-    <div class="app-content list">
-      <div>热门推荐</div>
+    <div class="app-all-parttime-content">
       <ul>
         <li v-for="value in list" :key="value.id">
           <ul>
@@ -18,7 +17,7 @@
 </template>
 <script>
 export default {
-    name:'app-content',
+    name:'app-all-parttime-content',
     data(){
     	return{
     		list:[]
@@ -35,5 +34,3 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
-</style>

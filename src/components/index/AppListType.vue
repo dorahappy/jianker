@@ -1,11 +1,29 @@
 <template>
     <div class="app-listType">
-        <ul>
-            <li>宅兼职</li>
-            <li>大学兼职</li>
-            <li>短期兼职</li>
-            <li>长期兼职</li>
-        </ul>
+        <dl>
+            <dt class="iconfont-img">
+                <img src="../../../static/images/index-home.png" alt="">
+            </dt>
+            <dd>宅兼职</dd>
+        </dl>
+        <dl>
+            <dt class="iconfont-img">
+                <img src="../../../static/images/index-bag.png" alt="">
+            </dt>
+            <dd>大学生兼职</dd>
+        </dl>
+        <dl>
+            <dt class="iconfont-img">
+                <img src="../../../static/images/index-clock.png" alt="">
+            </dt>
+            <dd>短期兼职</dd>
+        </dl>
+        <dl>
+            <dt class="iconfont-img">
+                <img src="../../../static/images/index-list.png" alt="">
+            </dt>
+            <dd>长期兼职</dd>
+        </dl>
     </div>
 </template>
 <script>
@@ -14,5 +32,4 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-
 </style>

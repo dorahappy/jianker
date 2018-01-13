@@ -2,11 +2,16 @@
     @include flexbox();
     height:0.44rem;
     width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
    div {
       font-size: .16rem;
       @include flexbox();
       @include justify-content(center);
       @include align-items(center);
+      color: #fff;
       &:first-child {
         width: .8rem;
       }
@@ -17,15 +22,19 @@
           width: .2rem;
           height: .2rem;
           line-height: .25rem;
-          padding-left:0.05rem;
+          padding-left:0.10rem;
+          color: #7a7a77;
         }
         > div {
-          @include border(1px, #ccc, solid, 10px);
+          @include border(1px, #ccc, solid, 15px);
           height: .30rem;
           width: 100%;
+          background: rgba(255, 255, 255, .9);
           input {
+            margin-left: 10px;
             background: transparent;
             border: 0;
+            color: #7a7a77;
           }
         }
       }
