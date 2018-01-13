@@ -1,24 +1,20 @@
 .app-listType{
     width: 100%;
     height: .7rem;
-    background: #fff;
-    @include flexbox();
-    @include justify-content(space-around);
-    @include align-items(center);
-    dl{
+    ul{
         @include flexbox();
         height: 100%;
-        @include align-items(center);
         @include justify-content(space-around);
-        @include flex-direction(column);
-        width: 20%;
-        .iconfont-img{
-            img{
-                width: 36px;
-            }
-        }
-        dd{
-            font-size: 10px;
+        @include align-items(center);
+        li{
+            width: 20%;
+            height: .4rem;
+            background: #FFCC99;
+            @include border(0, #666, solid, .25rem);
+            line-height: .4rem;
+            text-align: center;
+            font-size: .16rem;
+            color: #fff;
         }
     }
 }

@@ -48,6 +48,7 @@ export default {
 		position:fixed;
 		top:0;
 		left:0;
+		background:url(/static/images/index/index_01.png);
 		background:url(/static/img/index/start.png);
 		background-size:cover;
 	}

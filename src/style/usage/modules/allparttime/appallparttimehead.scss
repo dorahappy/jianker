@@ -10,11 +10,7 @@
        justify-content: space-between;
        padding:0 0.1rem;
        li{
-           &:nth-child(1){
-               font-size:22px;
-               padding-top:5px;
-           }
-           font-size:18px;
+           font-size:16px;
            color:#fff;
        }
     }

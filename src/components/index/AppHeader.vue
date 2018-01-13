@@ -8,7 +8,7 @@
   	<div class="search">
   		<div>
   			<i class="yo-ico">&#xf067</i>
-  			<input type="text" placeholder="大家都在搜：兼职" />
+  			<input type="text" />
   		</div>
   	</div>
   	
