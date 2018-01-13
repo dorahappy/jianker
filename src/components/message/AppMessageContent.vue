@@ -1,6 +1,6 @@
 <template>
     <div class="app-message-content">
-        <div class="messageList" v-for="list in lists" :key="list.id">
+        <div class="messageList" v-for="list in lists" :key="list.id" :class="{admission:!list.admission,noadmission:list.admission}">
         	<div class="messageImg"></div>
         	<div class="messageInfo">
         		<ul>
@@ -42,10 +42,12 @@ export default {
 	.admission{
 		background:#fff;
 	}
+	.noadmission{
+		background:#FACD89;
+	}
 	.messageList{
 		height:0.80rem;
 		/*width:100%;*/
-		background:#FACD89;
 		border:1px solid transparent;
 		border-radius:5px;
 		margin:10px;
