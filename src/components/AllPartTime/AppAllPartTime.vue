@@ -13,15 +13,7 @@
 export default {
     name: 'app-allparttime',
     components:{
-        AppAllPartTimeHead,AppAllPartTimeNav,AppAllPartTimeContent
-    },
-    mounted(){
-
-    },
-    computed:{
-        
-    },
-    methods:{
+    	AppAllPartTimeHead,AppAllPartTimeNav,AppAllPartTimeContent
     }
 }
 </script>

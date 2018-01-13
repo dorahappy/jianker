@@ -1,16 +1,22 @@
 <template>
     <div class="app-message">
-        message消息
+        <AppMessageHead></AppMessageHead>
+        <AppMessageContent></AppMessageContent>
     </div>
 </template>
 
 <script>
+	import AppMessageHead from './AppMessageHead'
+	import AppMessageContent from './AppMessageContent'
 export default {
     name: 'app-message',
+    components:{
+    	AppMessageHead,AppMessageContent
+    }
   
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
