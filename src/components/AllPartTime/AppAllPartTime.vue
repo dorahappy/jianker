@@ -1,13 +1,20 @@
 <template>
     <div class="app-allparttime">
-        allparttime全部兼职
-        
+        <AppAllPartTimeHead></AppAllPartTimeHead>
+        <AppAllPartTimeNav></AppAllPartTimeNav>
+        <AppAllPartTimeContent></AppAllPartTimeContent>        
     </div>
 </template>
 
 <script>
+	import AppAllPartTimeHead from './AppAllPartTimeHead'
+	import AppAllPartTimeNav from './AppAllPartTimeNav'
+	import AppAllPartTimeContent from './AppAllPartTimeContent'
 export default {
     name: 'app-allparttime',
+    components:{
+        AppAllPartTimeHead,AppAllPartTimeNav,AppAllPartTimeContent
+    },
     mounted(){
 
     },
@@ -15,7 +22,6 @@ export default {
         
     },
     methods:{
-        
     }
 }
 </script>

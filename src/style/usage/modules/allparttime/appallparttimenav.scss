@@ -1,0 +1,9 @@
+.app-allparttime-nav{
+  height:0.4rem;
+  width:100%;
+  background:#fff;
+  @include flexbox();
+  @include justify-content(space-between);
+
+  @include align-items(center);
+}

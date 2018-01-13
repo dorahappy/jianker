@@ -1,0 +1,83 @@
+.app-all-parttime-content {
+    z-index: -100;
+    background: #fff;
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    height:5.13rem;
+    > ul {
+      @include flex();
+      overflow: scroll;
+      width: 100%;
+       > li {
+        padding: .1rem;
+        height: .75rem;
+        background: #fff;
+        @include border(1px 0 0 0, #e5e5e5, solid);
+        @include justify-content(center);
+        > ul {
+          @include flexbox();
+          @include justify-content(center);
+          @include align-items(center);
+          height: 100%;
+          > li {
+            &:first-child {
+              width: .4rem;
+              @include border(0, #fff, solid, .2rem);
+              line-height: .4rem;
+              height: .4rem;
+              text-align: center;
+              font-size: .1rem;
+              color: #fff;
+              background: #fb9b9b;
+            }
+            &:nth-child(2) {
+              padding-left: .1rem;
+              @include flex();
+              @include flexbox();
+              @include flex-direction(column);
+              @include justify-content(center);
+              h1 {
+                font-size: .14rem;
+                @include ellipsis();
+              }
+              h2, h3 {
+                font-weight: 100;
+                font-size: 0.12rem;
+                span{
+                  &:nth-child(2){
+                    margin-left: .11rem;
+                  }
+                }
+              }
+              h2{
+                color: #666666;
+              }
+              h3{
+                color: #999999;
+                span{
+                  &:nth-child(2){
+                    display: inline-block;
+                    width: .52rem;
+                    height: .17rem;
+                    background: #fd6c23;
+                    text-align: center;
+                    color: #fff;
+                    @include border(0, #666, solid, .02rem);
+                  }
+                }
+              }
+            }
+            &:last-child {
+              width: .8rem;
+              text-align: center;
+              line-height: .8rem;
+              font-size: .18rem;
+              color: #fd6c23;
+            }
+            
+          }
+        }
+      }
+    }
+  }

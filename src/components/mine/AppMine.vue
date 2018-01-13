@@ -15,6 +15,7 @@ export default {
     components:{
     	AppMineHead,AppMineLogin,AppMineNav
     }
+
 }
 </script>
 
