@@ -4,10 +4,13 @@
     height: 0.5rem;
     @include flexbox();
     @include justify-content(space-around);
-    @include border(1px 0 0 0, #666, solid);
+    @include border(1px 0 0 0, #e5e5e5, solid);
     position: fixed;
     bottom: 0;
     left: 0;
+    .active{
+        color: #fd6c23;
+    }
     dl{
         width: 20%;
         @include flexbox();
@@ -20,7 +23,6 @@
         }
         dd{
             font-size: 0.12rem;
-            
         }
     }
     dl:nth-child(1){

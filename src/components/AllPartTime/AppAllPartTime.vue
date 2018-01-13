@@ -2,8 +2,7 @@
     <div class="app-allparttime">
         <AppAllPartTimeHead></AppAllPartTimeHead>
         <AppAllPartTimeNav></AppAllPartTimeNav>
-        <AppAllPartTimeContent></AppAllPartTimeContent>
-        
+        <AppAllPartTimeContent></AppAllPartTimeContent>        
     </div>
 </template>
 
@@ -15,6 +14,13 @@ export default {
     name: 'app-allparttime',
     components:{
     	AppAllPartTimeHead,AppAllPartTimeNav,AppAllPartTimeContent
+    mounted(){
+
+    },
+    computed:{
+        
+    },
+    methods:{
     }
 }
 </script>

@@ -5,6 +5,8 @@ import AllPartTime from '@/components/AllPartTime/AppAllPartTime'
 import AppCollege from '@/components/college/AppCollege'
 import AppMessage from '@/components/message/AppMessage'
 import AppMine from '@/components/mine/AppMine'
+import AppRegister from '@/components/register/AppRegister'
+import AppLogin from '@/components/login/AppLogin'
 
 Vue.use(Router)
 
@@ -34,6 +36,16 @@ export default new Router({
       path:'/mine',
       name:'mine',
       component: AppMine
+    },
+    {
+      path:'/register',
+      name:'register',
+      component: AppRegister
+    },
+    {
+      path:'/login',
+      name:'login',
+      component: AppLogin
     }
   ]
 })

@@ -2,7 +2,7 @@
     <div class="app-content list">
       <div>热门推荐</div>
       <ul>
-        <li v-for="value in list">
+        <li v-for="value in list" :key="value.id">
           <ul>
             <li>{{value.postype}}</li>
             <li>
@@ -29,7 +29,6 @@ export default {
         .then((response)=>response.json())
         .then((res)=>{
             this.list = res.data.subjects
-            console.log(this.list)
         })
     }
 }
