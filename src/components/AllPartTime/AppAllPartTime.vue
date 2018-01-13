@@ -15,7 +15,6 @@ export default {
     components:{
     	AppAllPartTimeHead,AppAllPartTimeNav,AppAllPartTimeContent
     }
-   
 }
 </script>
 
