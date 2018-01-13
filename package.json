@@ -14,6 +14,7 @@
     "mock": "json-server ./static/mock/mock.js -r ./static/mock/routes.json -p 9000"
   },
   "dependencies": {
+    "mint-ui": "^2.2.13",
     "swiper": "^4.0.7",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",

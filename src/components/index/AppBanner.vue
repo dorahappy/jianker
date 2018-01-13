@@ -1,5 +1,5 @@
 <template>
-    <div class="app-banner swiper-container">
+    <!--<div class="app-banner swiper-container">
         <div class="swiper-wrapper banner">
             <div class="swiper-slide banner-item" v-for="banner of banners" :key="banner.id">
                 <img :src="banner.imgUrl" :alt="banner.title" :title="banner.title">
@@ -8,10 +8,19 @@
         <div class="swiper-pagination">
             
         </div>
+    </div>-->
+    <div class="app-banner">
+    	<mt-swipe :auto="2000">
+			  <mt-swipe-item v-for="banner of banners" :key="banner.id">
+				   <img :src="banner.imgUrl" :alt="banner.title" :title="banner.title">
+			  </mt-swipe-item>
+		 </mt-swipe>
     </div>
+
 </template>
 <script>
-import Swiper from 'swiper'
+//import Swiper from 'swiper'
+import {Swipe, SwipeItem} from 'mint-ui'
 export default {
     name:'app-banner',
     data:function(){
@@ -24,15 +33,23 @@ export default {
             ]
         }
     },
-    mounted(){
-        new Swiper('.app-banner',{
-            autoplay:true,
-            loop:true,
-            disableOnInteraction:false
-        })
-    },
+     components: {
+	  'mt-swipe': Swipe,
+	  'mt-swipe-item': SwipeItem
+ 	},
 }
 </script>
 <style lang='scss' scoped>
-
+.app-banner{
+    width: 100%;
+    height: 1.83rem;
+    background: #fff;
+    .mint-swipe-indicator.is-active{
+    	background:#fff;
+    }
+    img{
+    	width:100%;
+    	height:100%;
+    }
+}
 </style>

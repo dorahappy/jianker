@@ -7,7 +7,9 @@ import store from './store'
 
 import "@/style/usage/app.scss"
 
-import '../node_modules/swiper/dist/css/swiper.min.css'
+//import '../node_modules/swiper/dist/css/swiper.min.css'
+
+import '../node_modules/mint-ui/lib/style.css'
 
 Vue.config.productionTip = false
 
