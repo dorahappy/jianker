@@ -8,6 +8,7 @@ import AppMine from '@/components/mine/AppMine'
 import AppRegister from '@/components/register/AppRegister'
 import AppLogin from '@/components/login/AppLogin'
 import AppDetail from '@/components/detail/AppDetail'
+import AppPosition from '@/components/position/AppPosition'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path:'/detail',
       name:'detail',
       component: AppDetail
+    },
+    {
+      path:'/city',
+      name:'city',
+      component: AppPosition
     }
   ]
 })

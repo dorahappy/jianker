@@ -1,21 +1,23 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import * as mt from './mutation-type'
+import * as at from './action-type'
 
 
 Vue.use(Vuex)
 
 const state = {
-    count: 0,
-    num: 10,
-    isLogin: false
+    city: '北京',
+    isLogin: false,
+    partList: []
 }
 
 const mutations = {
-    add(state, payload){
-        state.count += payload.params.age
+    [mt.CHANGECITY](state, parme) {
+        state.city = parme
     },
-    reduce(state){
-        state.count--
+    [mt.CHANGELIST](state, parme) {
+        state.partList = parme
     }
 }
 

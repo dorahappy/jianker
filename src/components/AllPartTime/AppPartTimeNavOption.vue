@@ -3,7 +3,7 @@
 		<div v-on:click="showClick">
 	        <p v-text="options[selected].text"></p><i></i>
 	        <ul style="display: none;" v-show="show" >
-	            <li @click="select(optionIndex)" v-for="(option, optionIndex) in options" >{{option.text}} </li>
+	            <li @click="select(optionIndex)" v-for="(option, optionIndex) in options" :key="optionIndex">{{option.text}} </li>
 	        </ul>
 	    </div> 
     </div>
@@ -17,7 +17,9 @@ export default {
         show: false,
         options: [
           { text: '北京' },
-          { text: '上海' }
+          { text: '上海' },
+          { text: '杭州' },
+          { text: '天津' }
         ],
         selected: 0, // 代表選中的索引
       }

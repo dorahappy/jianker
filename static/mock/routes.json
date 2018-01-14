@@ -3,5 +3,6 @@
     "/api/position/list": "/list",
     "/api/position/ptCircle": "/ptCircle",
     "/api/position/listContent": "/listContent",
-    "/api/user/message": "/info"
+    "/api/user/message": "/info",
+    "/api/position/city": "/city"
 }
