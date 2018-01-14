@@ -19,7 +19,9 @@ export default {
     },
     methods:{
         close(){
-            return false;
+            setTimeout(() => {
+                window.location.hash = '/city'
+            }, 0)
         }
     }
 }

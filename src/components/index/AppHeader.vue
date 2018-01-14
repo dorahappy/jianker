@@ -3,7 +3,7 @@
 		<div class="head-shadow"></div>
 		<div class="head-box">
 			<div class="city" @click="toCity">
-				<span>北京</span>
+				<span>{{city}}</span>
 				<i class="yo-ico">&#xf031</i>
 			</div>
 			
@@ -21,12 +21,18 @@
   </header>
 </template>
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex'
 export default {
 	name:"app-head",
 	methods:{
 		toCity(){
 			this.$router.push({name:'city'})
 		}
+	},
+	computed: {
+		...mapState({
+		city: 'city'
+		})
 	}
 }
 </script>

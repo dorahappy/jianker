@@ -10,8 +10,8 @@
                     <p class="protocol">记住密码</p>
                 </div>
                 <div class="argee-protocol">
-                    <input type="checkbox" id="argee"/>
-                    <label for="argee"></label>
+                    <input type="checkbox" id="login"/>
+                    <label for="login"></label>
                     <p class="protocol">自动登录</p>
                 </div>
             </div>

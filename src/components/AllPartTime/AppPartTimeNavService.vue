@@ -3,7 +3,7 @@
 	    <div v-on:click="showClick">
 	        <p v-text="partworks[selected].text"></p><i></i>
 	        <ul style="display: none;" v-show="show" >
-	            <li @click="select(partworkIndex)" v-for="(partwork, partworkIndex) in partworks" >{{partwork.text}} </li>
+	            <li @click="select(partworkIndex)" v-for="(partwork, partworkIndex) in partworks" :key="partworkIndex">{{partwork.text}} </li>
 	        </ul>
 	    </div> 
     </div>
@@ -16,8 +16,14 @@ export default {
     	 return {
         show: false,
         partworks:[
+          {text:'全部'},
         	{text:'客服'},
-        	{text:'短期兼职'}
+        	{text:'服务'},
+        	{text:'销售'},
+        	{text:'学生'},
+        	{text:'模特'},
+        	{text:'临时工'},
+        	{text:'文员'}
         ],
         
         selected: 0, // 代表選中的索引
