@@ -1,8 +1,21 @@
 <template>
     <div class="app-login">
         <div class="content">
-            <app-form :placeHolder="'请输入您的用户名'"></app-form>
-            <app-form :passIcon="'passIcon'" :placeHolder="'请输入您的密码'"></app-form>
+            <form @submit.prevent = 'login(email,password)'>
+            	 <div class="app-form">
+			        <p class="inp-icon">
+			            <span class="passIcon"></span>
+			        </p>
+			        <input id='email' v-model = "userInfo.userEmail" type="text" placeholder="请输入您的用户名"/>
+			    </div>
+			    <div class="app-form">
+			        <p class="inp-icon">
+			            <span class="passIcon"></span>
+			        </p>
+			        <input id='pass' v-model="userInfo.userPassword" type="password" placeholder="请输入您的密码"/>
+			    </div>                       
+                
+            </form>
             <div class="remember-checked">
                 <div class="argee-protocol">
                     <input type="checkbox" id="argee"/>
@@ -15,7 +28,7 @@
                     <p class="protocol">自动登录</p>
                 </div>
             </div>
-            <input type="button" value="登录">
+            <input type="submit" value="登录" @click="login('',{userEmail:userInfo.userEmail,userPassword:userInfo.userPassword})"/>
             <p class="forget-pass">忘记密码?</p>
             <ul>
                 <li @click="toRegister">立即注册</li>
@@ -26,28 +39,56 @@
 </template>
 
 <script>
-import AppForm from './AppForm'
+	import { Toast } from 'mint-ui'
+	import { mapState, mapMutations } from 'vuex'
 export default {
     name: 'app-login',
-    components:{
-        AppForm
-    },
+   
     data:function(){
         return {
+        	userInfo:{userEmail:'',userPassword:''}
+            
             
         }
     },
     computed:{
         
     },
+   
     methods:{
+    	...mapMutations(['setInfo']),
+    	login(e,params){
+    		let that = this
+            var userMsg = JSON.parse(localStorage.userMsg)
+      		for (var i = 0; i < userMsg.length; i++) {
+        		if (userMsg[i].userEmail === params.userEmail && userMsg[i].userPassword === params.userPassword) {
+          			Toast({
+	           			 message: '登录成功',
+	            		 duration: 1000
+          			})
+		       this.setInfo(params)
+          		that.$router.replace({name:'mine'})
+          		break
+          		
+        	}
+      }
+      if (i === userMsg.length) {
+        Toast({
+          message: '登录失败',
+          duration: 1000
+        })
+      }
+    },
         toHome(){
             this.$router.push({name:'home'})
         },
         toRegister(){
             this.$router.push({name:'register'})
         }
-    }
+    },
+    computed: {
+    	...mapState(['userMsg'])
+  	}
 }
 </script>
 
@@ -60,6 +101,40 @@ export default {
         .content{
             margin-top: 330px;
             padding: 0 38px;
+            .app-form{
+		    width: 100%;
+		    height: .41rem;
+		    background: #fff;
+		    border-radius: 5px;
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    margin-bottom: 15px;
+		    .inp-icon{
+		        width: 41px;
+		        height: 41px;
+		        background: #FD6C23;
+		        border-radius: 5px 0 0 5px;
+		        display: flex;
+		        justify-content: center;
+		        align-items: center;
+		        span{
+		            display: inline-block;
+		            width: 22px;
+		            height: 21px;
+		            background: url(/static/img/login/login_icon.png) no-repeat 0 -22px;
+		            background-size: 22px 44px;
+		        }
+		        .passIcon{
+		            background-position: 0 0;
+		        }
+		    }
+		    input{
+		        width: 240px;
+		        border: 0;
+		        font-size: 15px;
+		    }
+		}
             .argee-protocol{
                 line-height: 18px;
                 input[type='checkbox'] {
@@ -95,7 +170,7 @@ export default {
                 justify-content: space-between;
                 align-items: center;
             }
-            input[type='button']{
+            input[type='submit']{
                 margin-top: 13px;
                 width: 100%;
                 height: 41px;

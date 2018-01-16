@@ -2,9 +2,15 @@
     <div class="app-mine-login">
         <div class="app-mine-login-img">
         	<div class="userimg">
-        		<img src="" alt="" />
+        		<img src="/static/img/message/img_01.jpg" alt="" v-if="isShow"/>
         	</div>
-        	<span>登录</span><span>/</span><span>注册</span>
+        	<div class="login">
+        		<router-link :to="{name:'login'}" tag="span">登录</router-link>
+        		<span>/</span>
+        		<router-link :to="{name:'register'}" tag="span">注册</router-link>
+        	</div>
+        	<div class="loginInfo">{{userMsg.userEmail}}</div>
+        	
         </div>
         <div class="app-mine-login-nav">
         	<dl>
@@ -28,9 +34,28 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
     name: 'app-mine-login',
-  
+  	computed: mapState(['userMsg']),
+  	data:function(){
+  		return{
+  			isShow:false
+  		}
+  		
+  	},
+  	methods:{
+  		
+  		
+  	},
+  	created(){
+  		console.log(this.userMsg.userEmail)
+  			if(this.userMsg.userEmail != undefined)(
+  				this.isShow = true
+  		)
+  		
+  	}
+  	
 }
 </script>
 

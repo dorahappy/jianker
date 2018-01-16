@@ -11,15 +11,19 @@
 export default {
     name: 'app-form',
     props: ['passIcon', 'placeHolder'],
-    mounted(){
-
-    },
-    computed:{
-        
-    },
-    methods:{
-        
-    }
+//  mounted(){  
+//          let that=this
+//          that.data = localStorage.getItem("user_info")
+//          that.data = JSON.parse(that.data)
+//          that.data_nickname = that.data.user_id
+//      },
+//      methods:{
+//          delateItem(){
+//              let that = this
+//              localStorage.removeItem("user_info")
+//              location.href="/mine-fo/minelogin"
+//          }
+//      }
 }
 </script>
 

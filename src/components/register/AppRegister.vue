@@ -2,46 +2,134 @@
     <div class="app-register">
         <div class="header">
             <i class="yo-ico">&#xf07d;</i>
-            <p>注册</p>
+            <p @click="tologin()">注册</p>
             <i class="yo-ico">&#xf07f;</i>
         </div>
-        <div class="form-reg">
-            <app-form :inpTitle="'账号'" :placeHolder="'请填写账号或邮箱注册'"></app-form>
-            <app-form :inpTitle="'密码'" :placeHolder="'6-20位数字或字母'"></app-form>
-            <app-form :inpTitle="'确认密码'" :placeHolder="'请确认密码'"></app-form>
-            <div class="argee-protocol">
-                <input type="checkbox" id="argee" v-model="ischecked" />
+        <form @submit.prevent = 'register(user)' class="form-reg">
+	        <div class="app-form">
+	        	<label for="email" class="inp-title">账号</label>
+	        	<input v-model="user.email" @blur.prevent="table_judge1(user.email)"  type="text" id="email" placeholder="请输入账号或邮箱地址"/>
+		    </div>
+		     <div class="app-form">
+	        	<label for="password" class="inp-title">密码</label>
+	        	<input v-model="user.password1" @blur.prevent="table_judge2(user.password1)" type="password" id="password" placeholder="6-20位数字或字母"/>
+		    </div>
+		    <div class="app-form">
+	        	<label for="passto" class="inp-title">确认密码</label>
+	        	<input v-model="user.password2" @blur.prevent="table_judge3(user.password2)" type="password" id="passto" placeholder="请确认密码"/>
+		    </div>
+		    <span v-show="user.isShow">{{user.errormessage}}</span>
+	    	 <div class="argee-protocol">
+                <input type="checkbox" id="argee" v-model="user.ischecked" @click="table_judge4(user.ischecked)" />
                 <label for="argee"></label>
                 <p class="protocol">我已经阅读并同意<a href="#">兼客儿用户协议</a></p>
             </div>
-            <input type="button" value="立即注册">
-            
-        </div>
+            <input type="submit" @click="registerInfo({userEmail:user.email,userPassword:user.password1})" value="立即注册">
+	    </form>
     </div>
 </template>
 
 <script>
-import AppForm from './AppForm'
+
+import axios from 'axios'
+import {Toast} from 'mint-ui'
 export default {
     name: 'app-register',
-    components:{
-        AppForm  
-    },
+   
     data:function(){
         return {
-            ischecked:false
+        	user:{ischecked:false,email:'',password1:'',password2:'',isShow:false,errormessage:'',argee:''}
+            
         }
     },
-    mounted(){
-
-    },
-    computed:{
-        
-    },
+    
     methods:{
-        
+    	registerInfo(params){
+    		let arr = localStorage.userMsg ? JSON.parse(localStorage.userMsg) : []
+	          arr.push(params)
+	          localStorage.userMsg = JSON.stringify(arr)
+//	          this.$router.push({name: 'login'})
+    	},
+      table_judge1(user){
+          let reg = /(^\w+(\.[a-z]{2,3})?(\.[a-z]{2,3})$)|([0-9]{6,11})/
+          
+          if(reg.test(this.user.email)){
+	              this.user.isShow=false
+            }else{
+            	if(this.user.email == ''){
+	         		this.user.isShow=true
+                	this.user.errormessage='注册账号不能为空哦'
+            	}else{
+	         		this.user.isShow=true
+                	this.user.errormessage='邮箱格式有误'
+            	}
+                
+            }
+            
+        },
+         table_judge2(user){
+            let reg = /^[a-z,A-Z,0-9]{6,20}/
+            if(reg.test(this.user.password1)){
+                this.user.isShow=false
+            }else{
+            	console.log(this.user.password1)
+            	if(this.user.password1 == ''){
+            		this.user.isShow=true
+                	this.user.errormessage='密码不能为空哦'
+            	}else{
+            		this.user.isShow=true
+                	this.user.errormessage='密码格式有误'
+            	}
+               
+            }
+        },
+         table_judge3(user){
+            if(this.user.password2 == this.user.password1){
+            	this.user.isShow=false
+
+            }else{
+                if(this.user.password2 == ''){
+                	this.user.isShow=true
+                	this.user.errormessage='确认密码不能为空'
+                }else{
+                	this.user.isShow=true
+                	this.user.errormessage='请输入一致的密码'
+                }
+            }
+        },
+        table_judge4(user){
+        	console.log(this.user.ischecked)
+            if(this.user.ischecked == false){
+            	this.user.isShow=false
+            }else{
+            	this.user.isShow=true
+                this.user.errormessage='还未同意用户协议'
+            }
+        },
+       register(user){
+            let that =this
+            if(that.user.password1==false||that.user.email==false||that.user.ischecked==false){
+                return false
+        	}
+            axios.get('/static/mock/register.json',{params:{password1:that.password1,email:that.email}}).then((res)=>{
+                
+                if(res.data.code==0){
+                    //跳转
+                    Toast('注册成功')
+                    that.$router.replace({name:'login'}) 
+                }else if(res.data.code==1){
+                    Toast('账号已存在')
+                }else if(res.data.code==2){
+                    Toast('')
+                }else if(res.data.code==3){
+                    Toast('邮箱已注册')
+                }
+            })
+            
+        }
     }
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -62,9 +150,39 @@ export default {
                 color: #fd6c23;
             }
         }
+        
         .form-reg{
             padding: 0 38px;
             margin-top: 35px;
+		    .app-form{
+		        width: 100%;
+		        height: .41rem;
+		        background: #fff;
+		        border-radius: 5px;
+		        display: flex;
+		        justify-content: space-around;
+		        align-items: center;
+		        margin-bottom: 19px;
+		        .inp-title{
+		            width: .91rem;
+		            height: .41rem;
+		            font-size: 15px;
+		            padding: 0 11px;
+		            line-height: .41rem;
+		            color: #333;
+		            text-align: left;
+		        }
+		        input{
+		            width: 240px;
+		            border: 0;
+		        }
+		    }
+		    span{
+		    	position:fixed;
+		    	top:2.6rem;
+		    	left:0.38rem;
+		    	color: #fd6c23;
+		    }
             .argee-protocol{
                 line-height: 18px;
                 input[type='checkbox'] {
@@ -94,7 +212,7 @@ export default {
                     }
                 }
             }
-            input[type='button']{
+            input[type='submit']{
                 width: 100%;
                 height: 41px;
                 background: #FD6C23;

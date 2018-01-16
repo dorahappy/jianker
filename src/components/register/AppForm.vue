@@ -1,23 +1,43 @@
 <template>
     <div class="app-form">
-        <p class="inp-title">{{inpTitle}}</p>
-        <input type="text" :placeholder="placeHolder"/>
+        <p class="inp-title" >{{inpTitle}}</p>
+        <input type="text" :placeholder="placeHolder"  @blur.prevent="table_judge(info)"/>
     </div>
 </template>
 
 <script>
 export default {
     name: 'app-form',
-    props:['inpTitle', 'placeHolder'],
+    props:['inpTitle', 'placeHolder','info'],
+     data:function(){
+            return {
+                email:'',
+                password:'',
+                password1:'',
+                isShow:false,
+                errormessage:'',
+            }
+        },
     mounted(){
-
+		console.log(this.info)
     },
     computed:{
         
     },
-    methods:{
-        
-    }
+  methods:{
+  	table_judge(data){
+  	 	if(data=='email'){
+  	 		let reg = /[a-z]/;
+                if(reg.test(data)){
+                    this.isShow=true
+                    this.errormessage='用户名格式有误'
+                }else{
+                    this.isShow=false
+                }
+  	 		}
+                
+    	}
+  	}
 }
 </script>
 

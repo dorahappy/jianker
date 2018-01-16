@@ -9,7 +9,8 @@ Vue.use(Vuex)
 const state = {
     city: '北京',
     isLogin: false,
-    partList: []
+    partList: [],
+    userMsg: {}
 }
 
 const mutations = {
@@ -18,11 +19,18 @@ const mutations = {
     },
     [mt.CHANGELIST](state, parme) {
         state.partList = parme
-    }
+    },
+    setInfo (state, userMsg) {
+    	state.userMsg = userMsg
+  	}
 }
 
-
+const action = {
+	
+}
+ const getters = {
+    
+}
 export default new Vuex.Store({
-    state,
-    mutations
+    state,mutations,action,getters
 })
