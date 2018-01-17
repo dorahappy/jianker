@@ -1,0 +1,67 @@
+{
+    "errcode": 0,
+    "errmsg": "",
+    "data": {
+      "start": 0,
+      "count": 10,
+      "total": 120,
+      "contentList": [
+                {
+                    "id":1,
+                    "imgUrl":"/static/img/college/college_cir.png",
+                    "trendTitle":"利郎",
+                    "time":"2017年12月31日",
+                    "trend":"我现在觉得，像李彦宏那样坚持独立发展是正 确的。"
+                },
+                {
+                    "id":2,
+                    "imgUrl":"/static/img/college/college_port.png",
+                    "trendTitle":"任正非",
+                    "time":"2017年12月30日",
+                    "trend":"企业发展就是要发展一批狼。狼有三大特性： 一是敏锐的嗅觉;二是不屈不挠、奋不顾身的进 攻精神;三是群体奋斗的意识。"
+                },
+                {
+                    "id":3,
+                    "imgUrl":"/static/img/college/college_cir.png",
+                    "trendTitle":"利郎",
+                    "time":"2017年12月29日",
+                    "trend":"我现在觉得，像李彦宏那样坚持独立发展是正 确的。"
+                },
+                {
+                    "id":4,
+                    "imgUrl":"/static/img/college/college_port.png",
+                    "trendTitle":"冯仑",
+                    "time":"2017年12月30日",
+                    "trend":"做生意应坚持这样一个观点，就叫做获取利润 之后的利润，核算成本之前的成本。学会让而 不是学会送，商人的最高境界是让，送是慈善"
+                },
+                {
+                    "id":5,
+                    "imgUrl":"/static/img/college/college_port.png",
+                    "trendTitle":"利郎",
+                    "time":"2017年12月31日",
+                    "trend":"我现在觉得，像李彦宏那样坚持独立发展是正 确的。"
+                },
+                {
+                    "id":6,
+                    "imgUrl":"/static/img/college/college_cir.png",
+                    "trendTitle":"任正非",
+                    "time":"2017年12月30日",
+                    "trend":"企业发展就是要发展一批狼。狼有三大特性： 一是敏锐的嗅觉;二是不屈不挠、奋不顾身的进 攻精神;三是群体奋斗的意识。"
+                },
+                {
+                    "id":7,
+                    "imgUrl":"/static/img/college/college_cir.png",
+                    "trendTitle":"利郎",
+                    "time":"2017年12月29日",
+                    "trend":"我现在觉得，像李彦宏那样坚持独立发展是正 确的。"
+                },
+                {
+                    "id":8,
+                    "imgUrl":"/static/img/college/college_cir.png",
+                    "trendTitle":"冯仑",
+                    "time":"2017年12月30日",
+                    "trend":"做生意应坚持这样一个观点，就叫做获取利润 之后的利润，核算成本之前的成本。学会让而 不是学会送，商人的最高境界是让，送是慈善"
+                }
+            ]
+    }
+}

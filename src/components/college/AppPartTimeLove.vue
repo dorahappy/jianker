@@ -37,7 +37,7 @@ export default{
 			this.isShow = true
 		},
 		jumpTocollege(){
-			this.$router.push({name:'college'})
+			this.$router.push({path:'/college'})
 		}
 	
 	}
@@ -49,9 +49,6 @@ export default{
 	box-sizing: border-box;
 	height:100%;
 	width:100%;
-	position:fixed;
-	top:0;
-	left:0;
 	background:#E5E5E5;
 	.app-header{
 	    padding: 0px 10px;

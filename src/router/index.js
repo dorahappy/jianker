@@ -12,6 +12,8 @@ import AppDetail from '@/components/detail/AppDetail'
 import AppPosition from '@/components/position/AppPosition'
 import AppPartTimeLove from '@/components/college/AppPartTimeLove'
 import AppRegisterAgree from '@/components/register/AppRegisterAgree'
+import AppWrite from '@/components/college/AppWrite'
+import AppCollegeContent from '@/components/college/AppCollegeContent'
 Vue.use(Router)
 
 export default new Router({
@@ -31,8 +33,9 @@ export default new Router({
       name:'college',
       component: AppCollege,
       children:[
-      	{path:"love",name:"love",component:AppPartTimeLove}
-      ]
+      {path:"love",name:"love",component:AppPartTimeLove},
+        { path: '/', name:'collegecontent', component: AppCollegeContent },
+        { path: 'publish', name:'publish', component: AppWrite }]
     },
     {
       path:'/message',
