@@ -1,5 +1,6 @@
 <template>
-    <router-link :to="{name:'love'}" class="app-content" tag="div">
+    <div  class="app-content" @click="jumpToTimelove()">
+    	
         <div class="user_info"><img :src="item.imgUrl" alt=""></div>
         <div class="list_content">
             <div class="content_title">
@@ -11,13 +12,19 @@
                 ...<span>【详情】</span>
             </div>
         </div>
-    </router-link>
+    </div>
 </template>
 
 <script>
 export default {
     name: 'app-content',
-    props: ['item']
+    props: ['item'],
+    methods:{
+		jumpToTimelove(){
+			this.$router.push({path:'/college/love'})
+		}
+	
+	}
     
 }
 </script>

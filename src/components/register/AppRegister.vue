@@ -1,8 +1,8 @@
 <template>
     <div class="app-register">
         <div class="header">
-            <i class="yo-ico">&#xf07d;</i>
-            <p @click="tologin()">注册</p>
+            <i class="yo-ico" @click="jumpToMine()">&#xf07d;</i>
+            <p>注册</p>
             <i class="yo-ico">&#xf07f;</i>
         </div>
         <form @submit.prevent = 'register(user)' class="form-reg">
@@ -22,7 +22,8 @@
 	    	 <div class="argee-protocol">
                 <input type="checkbox" id="argee" v-model="user.ischecked" @click="table_judge4(user.ischecked)" />
                 <label for="argee"></label>
-                <p class="protocol">我已经阅读并同意<a href="#">兼客儿用户协议</a></p>
+                <router-view></router-view>
+                <p class="protocol">我已经阅读并同意<a @click="jumpToAgree()">兼客儿用户协议</a></p>
             </div>
             <input type="submit" @click="registerInfo({userEmail:user.email,userPassword:user.password1})" value="立即注册">
 	    </form>
@@ -44,6 +45,12 @@ export default {
     },
     
     methods:{
+    	jumpToAgree(){
+    		this.$router.push({path:'/register/agree'})
+    	},
+    	jumpToMine(){
+    		this.$router.push({name:'mine'})
+    	},
     	registerInfo(params){
     		let arr = localStorage.userMsg ? JSON.parse(localStorage.userMsg) : []
 	          arr.push(params)

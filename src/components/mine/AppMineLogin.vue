@@ -12,23 +12,12 @@
         	<div class="loginInfo">{{userMsg.userEmail}}</div>
         	
         </div>
+        <router-view></router-view>
         <div class="app-mine-login-nav">
-        	<dl>
-        		<dt></dt>
-        		<dd>关于兼客</dd>
-        	</dl>
-        	<dl>
-        		<dt></dt>
-        		<dd>二维码</dd>
-        	</dl>
-        	<dl>
-        		<dt></dt>
-        		<dd>检查更新</dd>
-        	</dl>
-        	<dl>
-        		<dt></dt>
-        		<dd>清理缓存</dd>
-        	</dl>
+        	<ul>
+        		<li @click="jumpToaboutmine()"><p><span></span>关于兼客儿</p><i class="yo-ico">&#xf07f;</i></li>
+        		<li><p><span></span>二维码</p><i class="yo-ico">&#xf07f;</i></li>
+        	</ul>
         </div>
     </div>
 </template>
@@ -45,7 +34,9 @@ export default {
   		
   	},
   	methods:{
-  		
+  		jumpToaboutmine(){
+			this.$router.push({path:'/mine/aboutmine'})
+		}
   		
   	},
   	created(){

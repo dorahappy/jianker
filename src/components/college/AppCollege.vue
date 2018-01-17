@@ -7,6 +7,7 @@
             <div :class="{active:type=='part-circle'}">兼职圈</div>
         </div>
         <div class="content">
+        	<router-view></router-view>
             <app-content v-for="item of contentList" :key="item.id" :item="item"></app-content>
         </div>
     </div>

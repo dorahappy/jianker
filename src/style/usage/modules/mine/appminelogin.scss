@@ -1,5 +1,5 @@
 .app-mine-login{
-    height:179px;
+    height:190px;
     background:#fff;
     
     .app-mine-login-img{
@@ -35,57 +35,48 @@
             left:73px;
             background:#fff;
         }
-        
     }
+   
     .app-mine-login-nav{
-        height:88px;
-        display:flex;
-        justify-content: space-around;
-        align-items:center;
-        dl{
-            width:25%;
-            @include flexbox();
-            @include flex-direction(column);
-            justify-content:center;
-            align-items:center;
-            dd{
-                margin-top:8px;
-                font-size:14px;
-                color:#333333;
+            background:#fff;
+            height:100px;
+            margin-bottom: 10px;
+            ul{
+              li{
+                   height:50px;
+                   margin-left:10px;
+                   font-size:16px;
+                   color:#333333;
+                   @include flexbox();
+                   align-items:center;
+                   justify-content:space-between;
+                   p{
+                       @include flexbox();
+                       span{
+                           margin-right:10px;
+                       }
+                   }
+               }
+               li:nth-child(1){
+                   border-bottom:1px solid #e5e5e5;
+                   span{
+                       display: block;
+                       width:20px;
+                       height:20px;
+                       background:url(/static/img/mine/mine_01.png) no-repeat 4px 2px; 
+                       background-size:60px 205px;
+                   }
+               } 
+                li:nth-child(2){
+                   span{
+                       display: block;
+                       width:20px;
+                       height:20px;
+                       background:url(/static/img/mine/mine_01.png) no-repeat 0px -42px; 
+                       background-size:60px 205px;
+                   }
+               }
             }
-        }
-        
-        dl:nth-child(1){
-            dt{
-                width:35px;
-                height:35px;
-                background:url(/static/img/mine/mine_01.png) no-repeat 0px 1px;
-                background-size:96px 205px;
-            }
-        }
-        dl:nth-child(2){
-            dt{
-                width:35px;
-                height:35px;
-                background:url(/static/img/mine/mine_01.png) no-repeat 0px -52px;
-                background-size:96px 205px;
-            }
-        }
-        dl:nth-child(3){
-            dt{
-                width:35px;
-                height:35px;
-                background:url(/static/img/mine/mine_01.png) no-repeat 0px -112px;
-                background-size:96px 205px;
-            }
-        }
-        dl:nth-child(4){
-            dt{
-                width:35px;
-                height:35px;
-                background:url(/static/img/mine/mine_01.png) no-repeat 0px -170px;
-                background-size:96px 205px;
-            }
-        }
-    }
+       }
+ 
 }
