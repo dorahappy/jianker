@@ -4,5 +4,6 @@
     "/api/position/ptCircle": "/ptCircle",
     "/api/position/listContent": "/listContent",
     "/api/user/message": "/info",
-    "/api/position/city": "/city"
+    "/api/position/city": "/city",
+    "/api/user/partCir": "/partCir"
 }

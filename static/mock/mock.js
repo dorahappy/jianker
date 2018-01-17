@@ -3,6 +3,7 @@ var partentry = require("./partTime.json")
 var poscontent = require("./posListContent.json")
 var message = require("./message.json")
 var positioncity = require("./positionCity.json")
+var partCircle = require("./partCir.json")
 
 module.exports = function(){
     return {
@@ -10,6 +11,7 @@ module.exports = function(){
         ptCircle: partentry,
         listContent: poscontent,
         info: message,
-        city: positioncity
+        city: positioncity,
+        partCir: partCircle
     }
 }

@@ -10,6 +10,8 @@ import AppLogin from '@/components/login/AppLogin'
 import AppDetail from '@/components/detail/AppDetail'
 import AppPosition from '@/components/position/AppPosition'
 import AppPartTimeLove from '@/components/college/AppPartTimeLove'
+import AppWrite from '@/components/college/AppWrite'
+import AppCollegeContent from '@/components/college/AppCollegeContent'
 Vue.use(Router)
 
 export default new Router({
@@ -26,8 +28,13 @@ export default new Router({
     },
     {
       path:'/college',
-      name:'college',
-      component: AppCollege
+      name: 'college',
+      redirect: '/college/',
+      component: AppCollege,
+      children: [
+        { path: '/', name:'collegecontent', component: AppCollegeContent },
+        { path: 'publish', name:'publish', component: AppWrite }
+      ]
     },
     {
       path:'/message',

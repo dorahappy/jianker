@@ -1,29 +1,43 @@
 <template>
-    <router-link :to="{name:'love'}" class="app-content" tag="div">
-        <div class="user_info"><img :src="item.imgUrl" alt=""></div>
-        <div class="list_content">
-            <div class="content_title">
-                <h1>{{item.trendTitle}}</h1>
-                <span>{{item.time}}</span>
-            </div>
-            <div class="trend_msg">
-                <div class="msg_text">{{item.trend}}</div>
-                ...<span>【详情】</span>
+    <router-link :to="{name:'love'}" tag="div">
+        <div  v-for="item of contentList" :key="item.id" class="app-know-content">
+            <div class="user_info"><img :src="item.imgUrl" alt=""></div>
+            <div class="list_content">
+                <div class="content_title">
+                    <h1>{{item.trendTitle}}</h1>
+                    <span>{{item.time}}</span>
+                </div>
+                <div class="trend_msg">
+                    <div class="msg_text">{{item.trend}}</div>
+                    ...<span>【详情】</span>
+                </div>
             </div>
         </div>
+        
     </router-link>
 </template>
 
 <script>
 export default {
-    name: 'app-content',
-    props: ['item']
-    
+    name: 'app-know-content',
+    props: ['item'],
+    data:function(){
+        return {
+            contentList: []
+        }
+    },
+    mounted(){
+        fetch("http://localhost:5000/api/position/ptCircle")
+            .then((response)=>response.json())
+            .then((res)=>{
+                this.contentList = res.data.contentList
+            })
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-    .app-content{
+    .app-know-content{
         width: 100%;
         margin-top: 10px;
         height: 1.02rem;

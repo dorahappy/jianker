@@ -4,7 +4,7 @@
             <form @submit.prevent = 'login(email,password)'>
             	 <div class="app-form">
 			        <p class="inp-icon">
-			            <span class="passIcon"></span>
+			            <span></span>
 			        </p>
 			        <input id='email' v-model = "userInfo.userEmail" type="text" placeholder="请输入您的用户名"/>
 			    </div>
