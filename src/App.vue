@@ -27,7 +27,7 @@ export default {
         },
         routeChange(){
             console.log('routeChange')
-            if(this.$route.path=='/register'||this.$route.path=='/login'||this.$route.path=='/detail'||this.$route.path=='/city'||this.$route.path=='/college/publish'){
+            if(this.$route.path=='/register'||this.$route.path=='/login'||this.$route.path=='/detail'||this.$route.path=='/city'||this.$route.path=='/college/publish'||this.$route.path=='/message/show'){
                 this.NavHide()
             }else{
                 this.NavShow()

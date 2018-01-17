@@ -1,6 +1,6 @@
 <template>
     <div class="app-message-content">
-        <div class="messageList" v-for="list in lists" :key="list.id" :class="{admission:!list.admission,noadmission:list.admission}">
+        <div class="messageList" v-for="list in lists" :key="list.id" :class="{admission:!list.admission,noadmission:list.admission}" @click="todetail(list.id)">
         	<div class="messageImg"></div>
         	<div class="messageInfo">
         		<ul>
@@ -20,15 +20,20 @@ export default {
     	return{
     		lists:[]
     	}
-    },
-   mounted(){
-    fetch("http://localhost:5000/api/user/message")
-        .then((response)=>response.json())
-        .then((res)=>{
-        	console.log(res)
-            this.lists = res.data.subjects
-        })
-    }
+	},
+   	mounted(){
+		fetch("http://localhost:5000/api/user/message")
+			.then((response)=>response.json())
+			.then((res)=>{
+				console.log(res)
+				this.lists = res.data.subjects
+			})
+	},
+	methods: {
+		todetail(id){
+			this.$router.push({name: 'msgdetail', query: {id}})
+		}
+	}
 }
 </script>
 

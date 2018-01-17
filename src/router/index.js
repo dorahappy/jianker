@@ -12,6 +12,8 @@ import AppPosition from '@/components/position/AppPosition'
 import AppPartTimeLove from '@/components/college/AppPartTimeLove'
 import AppWrite from '@/components/college/AppWrite'
 import AppCollegeContent from '@/components/college/AppCollegeContent'
+import AppMessageDetail from '@/components/message/AppMessageDetail'
+import AppMessagePage from '@/components/message/AppMessagePage'
 Vue.use(Router)
 
 export default new Router({
@@ -39,7 +41,12 @@ export default new Router({
     {
       path:'/message',
       name:'message',
-      component: AppMessage
+      redirect: '/message/',
+      component: AppMessage,
+      children: [
+        { path: '/', name:'messagecontent', component: AppMessagePage },
+        { path: 'show', name:'msgdetail', component: AppMessageDetail }
+      ]
     },
     {
       path:'/mine',
