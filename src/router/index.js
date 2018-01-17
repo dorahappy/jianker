@@ -5,6 +5,7 @@ import AllPartTime from '@/components/AllPartTime/AppAllPartTime'
 import AppCollege from '@/components/college/AppCollege'
 import AppMessage from '@/components/message/AppMessage'
 import AppMine from '@/components/mine/AppMine'
+import AppAboutMe from '@/components/mine/AppAboutMe'
 import AppRegister from '@/components/register/AppRegister'
 import AppLogin from '@/components/login/AppLogin'
 import AppDetail from '@/components/detail/AppDetail'
@@ -14,6 +15,7 @@ import AppWrite from '@/components/college/AppWrite'
 import AppCollegeContent from '@/components/college/AppCollegeContent'
 import AppMessageDetail from '@/components/message/AppMessageDetail'
 import AppMessagePage from '@/components/message/AppMessagePage'
+import AppRegisterAgree from '@/components/register/AppRegisterAgree'
 Vue.use(Router)
 
 export default new Router({
@@ -35,7 +37,8 @@ export default new Router({
       component: AppCollege,
       children: [
         { path: '/', name:'collegecontent', component: AppCollegeContent },
-        { path: 'publish', name:'publish', component: AppWrite }
+        { path: 'publish', name:'publish', component: AppWrite },
+        {path:"love",name:"love",component:AppPartTimeLove}
       ]
     },
     {
@@ -51,12 +54,18 @@ export default new Router({
     {
       path:'/mine',
       name:'mine',
-      component: AppMine
+      component: AppMine,
+      children:[
+      	{path:"aboutmine",name:"aboutmine",component:AppAboutMe}
+      ]
     },
     {
       path:'/register',
       name:'register',
-      component: AppRegister
+      component: AppRegister,
+      children:[
+      	{path:"agree",name:"agree",component:AppRegisterAgree}
+      ]
     },
     {
       path:'/login',
@@ -72,11 +81,6 @@ export default new Router({
       path:'/city',
       name:'city',
       component: AppPosition
-    },
-    {
-    	path:'/love',
-    	name:'love',
-    	component:AppPartTimeLove
     }
   ]
 })

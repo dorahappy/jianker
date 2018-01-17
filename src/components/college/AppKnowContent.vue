@@ -1,6 +1,6 @@
 <template>
     <router-link :to="{name:'love'}" tag="div">
-        <div  v-for="item of contentList" :key="item.id" class="app-know-content">
+        <div  v-for="item of contentList" :key="item.id" class="app-know-content"  @click="jumpToTimelove()">
             <div class="user_info"><img :src="item.imgUrl" alt=""></div>
             <div class="list_content">
                 <div class="content_title">
@@ -32,7 +32,14 @@ export default {
             .then((res)=>{
                 this.contentList = res.data.contentList
             })
-    }
+    },
+    methods:{
+		jumpToTimelove(){
+			this.$router.push({path:'/college/love'})
+		}
+	
+	}
+    
 }
 </script>
 
