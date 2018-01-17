@@ -9,7 +9,7 @@ import AppRegister from '@/components/register/AppRegister'
 import AppLogin from '@/components/login/AppLogin'
 import AppDetail from '@/components/detail/AppDetail'
 import AppPosition from '@/components/position/AppPosition'
-
+import AppPartTimeLove from '@/components/college/AppPartTimeLove'
 Vue.use(Router)
 
 export default new Router({
@@ -58,6 +58,11 @@ export default new Router({
       path:'/city',
       name:'city',
       component: AppPosition
+    },
+    {
+    	path:'/love',
+    	name:'love',
+    	component:AppPartTimeLove
     }
   ]
 })

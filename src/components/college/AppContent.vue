@@ -1,5 +1,5 @@
 <template>
-    <div class="app-content">
+    <router-link :to="{name:'love'}" class="app-content" tag="div">
         <div class="user_info"><img :src="item.imgUrl" alt=""></div>
         <div class="list_content">
             <div class="content_title">
@@ -11,7 +11,7 @@
                 ...<span>【详情】</span>
             </div>
         </div>
-    </div>
+    </router-link>
 </template>
 
 <script>

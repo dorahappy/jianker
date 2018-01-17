@@ -1,7 +1,7 @@
 
 <template>
     <div class="app-header">
-        <i class="yo-ico">&#xf07d;</i>
+        <i class="yo-ico" @click="jumpToIndex()">&#xf07d;</i>
         <p>选择城市</p>
         <i class="yo-ico">&#xf07f;</i>
     </div>
@@ -14,6 +14,11 @@ export default {
     	return{
     		
     	}
+    },
+    methods:{
+    	jumpToIndex(){
+			this.$router.push({name:'home'})
+		}
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div class="app-header">
-        <i class="yo-ico">&#xf07d;</i>
+        <i class="yo-ico" @click="jumpTopAllwork()">&#xf07d;</i>
         <p>详情页</p>
         <i class="yo-ico">&#xf07f;</i>
     </div>
@@ -16,6 +16,9 @@ export default {
 	mounted(){
 	},
 	methods:{
+		jumpTopAllwork(){
+			this.$router.push({name:'allwork'})
+		}
 	}
 }
 </script>
