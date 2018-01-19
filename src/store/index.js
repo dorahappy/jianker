@@ -51,12 +51,10 @@ const actions = {
 		axios.get("/static/mock/partTime.json",{}).then((res)=>{
 
 			let detail = res.data.data.contentList
-//			console.log(detail)
 			var info;
 			detail.forEach((item,i)=>{
 				if(item.id == id){
 					info = item					
-					console.log(info)
 				}
 			})
 			commit("collectWork",info)

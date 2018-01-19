@@ -1,5 +1,5 @@
 <template>
-    <div class="app-all-parttime-content">
+    <li class="app-all-parttime-content">
       <ul>
         <li v-for="value in list" :key="value.id" @click="todetail(value.id)">
           <ul>
@@ -13,7 +13,7 @@
           </ul>
         </li>
       </ul>
-    </div>
+    </li>
 </template>
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex'
@@ -33,7 +33,7 @@ export default {
 		})
     },
    mounted(){
-    fetch("http://localhost:5000/api/position/list")
+    fetch("/static/mock/posList.json")
         .then((response)=>response.json())
         .then((res)=>{
             this.listcontent = res.data.subjects

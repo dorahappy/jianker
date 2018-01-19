@@ -17,6 +17,12 @@ import AppWrite from '@/components/college/AppWrite'
 import AppCollegeContent from '@/components/college/AppCollegeContent'
 import AppMessageDetail from '@/components/message/AppMessageDetail'
 import AppMessagePage from '@/components/message/AppMessagePage'
+
+import AppDelivery from '@/components/mine/AppDelivery'
+import AppIntegral from '@/components/mine/AppIntegral'
+import AppInstall from '@/components/mine/AppInstall'
+import AppSignIn from '@/components/signIn/AppSignIn'
+
 Vue.use(Router)
 
 export default new Router({
@@ -56,8 +62,14 @@ export default new Router({
       name:'mine',
       component: AppMine,
       children:[
-      	{path:"aboutmine",name:"aboutmine",component:AppAboutMe},
-      	{path:'minecollect',name:'minecollect',component:AppMineCollect}
+
+      	{path:'minecollect',name:'minecollect',component:AppMineCollect},
+
+        {path:"aboutmine",name:"aboutmine",component:AppAboutMe},
+        {path:"delivery",name:"delivery",component:AppDelivery},
+        {path:"integral",name:"integral",component:AppIntegral},
+        {path:"install",name:"install",component:AppInstall}
+
       ]
     },
     {
@@ -82,6 +94,11 @@ export default new Router({
       path:'/city',
       name:'city',
       component: AppPosition
+    },
+    {
+      path:'/signIn', 
+      name:'signIn', 
+      component:AppSignIn
     }
   ]
 })

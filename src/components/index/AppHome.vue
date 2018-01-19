@@ -28,7 +28,6 @@ export default {
     },
     beforeRouteEnter(to, from, next) {
 	  next((vm)=>{
-	  	console.log(vm)
 	  	if(from.name == null){
 	  		vm.isShow = true
 	  		setTimeout(function(){

@@ -68,7 +68,7 @@ export default {
         AppHeader, AppFooter
     },
 	mounted(){
-        fetch("http://localhost:5000/api/position/listContent")
+        fetch("/static/mock/posListContent.json")
             .then((response)=>response.json())
             .then((res)=>{
                 this.id = this.$router.history.current.query.id

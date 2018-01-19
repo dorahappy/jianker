@@ -28,7 +28,7 @@ export default {
         }
     },
     mounted(){
-        fetch("http://localhost:5000/api/user/partCir")
+        fetch("/static/mock/partCir.json")
             .then((response)=>response.json())
             .then((res)=>{
                 this.contentList = res.data.contentList

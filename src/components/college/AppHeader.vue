@@ -2,14 +2,18 @@
     <div class="app-header">
         <i class="yo-ico both-side">&#xf067</i>
         <p>智学堂</p>
-        <span class="both-side">签到</span>
+        <span class="both-side" @click="toSignIn">签到</span>
     </div>
 </template>
 
 <script>
 export default {
     name: 'app-header',
-    
+    methods:{
+        toSignIn(){
+            this.$router.push({name: 'signIn'})
+        }
+    }
 }
 </script>
 
