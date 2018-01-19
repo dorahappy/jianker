@@ -170,7 +170,7 @@ export default {
 		        align-items: center;
 		        margin-bottom: 19px;
 		        .inp-title{
-		            width: .91rem;
+		            width: 1rem;
 		            height: .41rem;
 		            font-size: 15px;
 		            padding: 0 11px;
