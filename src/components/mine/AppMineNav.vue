@@ -3,7 +3,7 @@
         <div class="app-aboutme">
         	<ul>
         		<li><p><span></span>我的投递</p><i class="yo-ico">&#xf07f;</i></li>
-        		<li><p><span></span>我的收藏</p><i class="yo-ico">&#xf07f;</i></li>
+        		<li @click="jumpToMineCollect()"><p><span></span>我的收藏</p><i class="yo-ico">&#xf07f;</i></li>
         		<li><p><span></span>我的积分</p><i class="yo-ico">&#xf07f;</i></li>
         	</ul>
         </div>
@@ -19,6 +19,11 @@
 <script>
 export default {
     name: 'app-mine-nav',
+    methods:{
+    	jumpToMineCollect(){
+    		this.$router.push({path:'/mine/minecollect'})
+    	}
+    }
   
 }
 </script>

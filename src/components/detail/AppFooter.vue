@@ -2,23 +2,28 @@
     <div class="app-footer">
         <div class="collect">
             <input type="checkbox" id="collect" v-model="ischecked"/>
-            <label for="collect"></label>
+            <label for="collect" @click="collectItem(id)"></label>
             <span>收藏</span>
         </div>
         <p>我要投递</p>
     </div>
 </template>
 <script>
+	import bus from '../../modules/bus'
+	import {mapActions} from "vuex"
 export default {
     name:'app-footer',
+    props:['id'],
     data(){
     	return{
     		ischecked:false
     	}
     },
 	mounted(){
+		
 	},
 	methods:{
+		...mapActions(['collectItem'])
 	}
 }
 </script>

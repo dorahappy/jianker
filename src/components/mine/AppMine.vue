@@ -3,6 +3,7 @@
         <AppMineHead></AppMineHead>
         <AppMineLogin></AppMineLogin>
         <AppMineNav></AppMineNav>
+       
     </div>
 </template>
 

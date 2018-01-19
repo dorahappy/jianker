@@ -3,7 +3,7 @@
     	
       <div>热门推荐</div>
       <ul>
-        <li v-for="value in list" :key="value.id" @click="todetail(value.id)">
+        <li v-for="value in list" :key="value.id" @click="todetail(value.id,value)">
           <ul>
             <li :class="[value.className]">{{value.postype}}</li>
             <li>
@@ -26,13 +26,17 @@ export default {
     	}
 	},
 	methods:{
+		
 		todetail(id){
+			
 			this.$router.push({name:'detail', query: {id}})
 		}
+		
 	},
 	mounted(){
 		fetch("http://localhost:5000/api/position/list")
 			.then((response)=>response.json())
+			
 			.then((res)=>{
 				this.list = res.data.subjects
 				this.list.map((item, i)=>{
@@ -67,6 +71,7 @@ export default {
 					}
 				})
 			})
+		
 	},
 	
 	

@@ -1,17 +1,14 @@
 <template>
     <div class="app-message">
-        <AppMessageHead></AppMessageHead>
-        <AppMessageContent></AppMessageContent>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-	import AppMessageHead from './AppMessageHead'
-	import AppMessageContent from './AppMessageContent'
 export default {
     name: 'app-message',
     components:{
-    	AppMessageHead,AppMessageContent
+        
     }
   
 }

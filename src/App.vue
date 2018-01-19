@@ -26,13 +26,12 @@ export default {
             this.isNavShow = false
         },
         routeChange(){
-            console.log('routeChange')
-            if(this.$route.path=='/register'||this.$route.path=='/login'||this.$route.path=='/detail'||this.$route.path=='/city'||this.$route.path=='/college/love'||this.$route.path=='/register/agree'||this.$route.path=='/mine/aboutmine'){
+            if(this.$route.path=='/mine/minecollect'||this.$route.path=='/register'||this.$route.path=='/login'||this.$route.path=='/detail'||this.$route.path=='/city'||this.$route.path=='/college/love'||this.$route.path=='/register/agree'||this.$route.path=='/mine/aboutmine'||this.$route.path=='/college/publish'||this.$route.path=='/message/show'){
                 this.NavHide()
             }else{
                 this.NavShow()
             }
-        }
+        }   
     },
     created(){
         this.routeChange()

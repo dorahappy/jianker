@@ -17,7 +17,7 @@ export default {
 	},
 	methods:{
 		jumpTopAllwork(){
-			this.$router.push({name:'allwork'})
+			this.$router.push({name:'home'})
 		}
 	}
 }
