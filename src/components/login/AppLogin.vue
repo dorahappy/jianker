@@ -1,6 +1,6 @@
 <template>
     <div class="app-login">
-        <div class="content">
+        <div class="login-content">
             <form @submit.prevent = 'login(email,password)'>
             	 <div class="app-form">
 			        <p class="inp-icon">
@@ -30,7 +30,7 @@
             </div>
             <input type="submit" value="登录" @click="login('',{userEmail:userInfo.userEmail,userPassword:userInfo.userPassword})"/>
             <p class="forget-pass">忘记密码?</p>
-            <ul>
+            <ul class="login-look">
                 <li @click="toRegister">立即注册</li>
                 <li @click="toHome">随便看看</li>
             </ul>
@@ -98,7 +98,7 @@ export default {
         background-image: url(/static/img/login/login_bg.png);
         background-size: cover; 
         overflow: hidden;
-        .content{
+        .login-content{
             margin-top: 330px;
             padding: 0 38px;
             .app-form{
@@ -189,7 +189,7 @@ export default {
                 text-align: left;
                 margin-top: 13px;
             }
-            ul{
+            ul.login-look{
                 position: absolute;
                 bottom: 10px;
                 width: 100%;
@@ -203,6 +203,7 @@ export default {
                     border-right: 1px solid #fff;
                     height: 15px;
                     line-height: 15px;
+                    color: #fff;
                     &:nth-child(2){
                         border-right: none;
                     }                
