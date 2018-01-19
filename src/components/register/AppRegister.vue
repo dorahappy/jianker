@@ -55,7 +55,6 @@ export default {
     		let arr = localStorage.userMsg ? JSON.parse(localStorage.userMsg) : []
 	          arr.push(params)
 	          localStorage.userMsg = JSON.stringify(arr)
-//	          this.$router.push({name: 'login'})
     	},
       table_judge1(user){
           let reg = /(^\w+(\.[a-z]{2,3})?(\.[a-z]{2,3})$)|([0-9]{6,11})/
@@ -171,7 +170,7 @@ export default {
 		        align-items: center;
 		        margin-bottom: 19px;
 		        .inp-title{
-		            width: .91rem;
+		            width: 1rem;
 		            height: .41rem;
 		            font-size: 15px;
 		            padding: 0 11px;

@@ -5,17 +5,18 @@ import AllPartTime from '@/components/AllPartTime/AppAllPartTime'
 import AppCollege from '@/components/college/AppCollege'
 import AppMessage from '@/components/message/AppMessage'
 import AppMine from '@/components/mine/AppMine'
+import AppMineCollect from '@/components/mine/AppMineCollect'
 import AppAboutMe from '@/components/mine/AppAboutMe'
 import AppRegister from '@/components/register/AppRegister'
 import AppLogin from '@/components/login/AppLogin'
 import AppDetail from '@/components/detail/AppDetail'
 import AppPosition from '@/components/position/AppPosition'
 import AppPartTimeLove from '@/components/college/AppPartTimeLove'
+import AppRegisterAgree from '@/components/register/AppRegisterAgree'
 import AppWrite from '@/components/college/AppWrite'
 import AppCollegeContent from '@/components/college/AppCollegeContent'
 import AppMessageDetail from '@/components/message/AppMessageDetail'
 import AppMessagePage from '@/components/message/AppMessagePage'
-import AppRegisterAgree from '@/components/register/AppRegisterAgree'
 import AppDelivery from '@/components/mine/AppDelivery'
 import AppIntegral from '@/components/mine/AppIntegral'
 import AppInstall from '@/components/mine/AppInstall'
@@ -36,14 +37,13 @@ export default new Router({
     },
     {
       path:'/college',
-      name: 'college',
-      redirect: '/college/',
+      name:'college',
       component: AppCollege,
-      children: [
+      children:[
+      {path:"love",name:"love",component:AppPartTimeLove},
         { path: '/', name:'collegecontent', component: AppCollegeContent },
-        { path: 'publish', name:'publish', component: AppWrite },
-        {path:"love",name:"love",component:AppPartTimeLove}
-      ]
+        { path: 'publish', name:'publish', component: AppWrite }],
+      redirect: '/college/'
     },
     {
       path:'/message',
@@ -63,7 +63,8 @@ export default new Router({
         {path:"aboutmine",name:"aboutmine",component:AppAboutMe},
         {path:"delivery",name:"delivery",component:AppDelivery},
         {path:"integral",name:"integral",component:AppIntegral},
-        {path:"install",name:"install",component:AppInstall}
+        {path:"install",name:"install",component:AppInstall},
+      	{path:'minecollect',name:'minecollect',component:AppMineCollect}
       ]
     },
     {

@@ -197,7 +197,6 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: #fff;
                 font-size: 15px;
                 li{
                     padding: 0 6px;
@@ -207,6 +206,7 @@ export default {
                     &:nth-child(2){
                         border-right: none;
                     }                
+                    
                 }
             }
         }

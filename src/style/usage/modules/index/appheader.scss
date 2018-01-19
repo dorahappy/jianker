@@ -41,8 +41,11 @@
           height: .30rem;
           width: 100%;
           background: rgba(255, 255, 255, .9);
+          i{
+            padding-left: .3rem;
+          }
           input {
-            margin-left: 10px;
+            margin-left: 25px;
             background: transparent;
             border: 0;
             color: #7a7a77;
