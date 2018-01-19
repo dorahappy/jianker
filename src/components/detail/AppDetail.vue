@@ -48,7 +48,7 @@
                 防骗警示：未标明收费的职位不会收取任何费用，若商家要求缴纳费用或押 金，请提高警惕并第一时间向我们举报！
             </div>
         </div>
-        <app-footer></app-footer>
+        <app-footer :id="id"></app-footer>
     </div>
 </template>
 <script>

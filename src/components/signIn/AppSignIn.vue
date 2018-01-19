@@ -2,7 +2,7 @@
     <div class="app-signIn">
         <div class="signIn-header">
             <ul>
-                <li class="yo-ico">&#xf06d</li>
+                <li class="yo-ico" @click="toHome">&#xf07d;</li>
                 <li>签到</li>
                 <li class="fa fa-star"></li>
             </ul>
@@ -14,9 +14,9 @@
         </div>
         <div class="add-point">
             我的积分
-            <p>+5</p>
+            <p>+{{point}}</p>
         </div>
-        <div class="signIn-btn">签到</div>
+        <div class="signIn-btn" @click="sign">签到</div>
     </div>
 </template>
 <script>
@@ -24,11 +24,12 @@ import { mapState, mapMutations, mapActions } from 'vuex'
 import * as mt from '../../store/mutation-type'
 import * as at from '../../store/action-type'
 import bus from '../../modules/bus'
+import {Toast} from 'mint-ui'
 export default {
     name:'app-signIn',
     data(){
     	return{
-    		listcontent:[]
+    		point: 5
     	}
     },
     computed: {
@@ -37,7 +38,13 @@ export default {
 		})
     },
     methods:{
-		
+		toHome(){
+            this.$router.push({name: 'home'})
+        },
+        sign(){
+            Toast('你好棒棒哟，加5分')
+            this.point += 5
+        }
     }
 
     

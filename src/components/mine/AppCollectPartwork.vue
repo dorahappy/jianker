@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div v-for="item of contentList" :key="item.id" class="app-know-content"  @click="jumpToTimelove(item.id)">
+	<div class="app-collect-partwork">
+		<div class="app-know-content" v-for="item of partTime" :key="item.id" v-show="isHide">
             <div class="user_info"><img :src="item.imgUrl" alt=""></div>
             <div class="list_content">
                 <div class="content_title">
@@ -12,43 +12,39 @@
                     ...<span>【详情】</span>
                 </div>
             </div>
+            
+            
         </div>
-        
-    </div>
+    	
+    	
+	</div>
+	
 </template>
 
 <script>
-	
-export default {
-    name: 'app-know-content',
-    props: ['item'],
-    data:function(){
-        return {
-            contentList: []
-        }
-    },
-    mounted(){
-        fetch("/static/mock/partTime.json")
-            .then((response)=>response.json())
-            .then((res)=>{
-//          	console.log(res)
-                this.contentList = res.data.contentList
-            })
-    },
-    methods:{
-		jumpToTimelove(num){
-			this.$router.push({path:'/college/love',query:{"num":num}})
+import {mapState} from 'vuex'
+export default{
+	name:"app-collect-partwork",
+	data:function(){
+		return{
+			isHide:false
 		}
+	},
+	created(){
 		
+			if(this.partTime.length != 0){
+				this.isHide = true
+			}
 		
-	
-	}
-    
+	},
+	computed:{
+		...mapState(['partTime'])
+	},
 }
 </script>
 
 <style lang="scss" scoped>
-    .app-know-content{
+	.app-know-content{
         width: 100%;
         margin-top: 10px;
         height: 1.02rem;
