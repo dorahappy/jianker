@@ -15,6 +15,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 2,
           "type": "short"
         },
         {
@@ -26,6 +27,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 1,
           "type": "long"
         },
         {
@@ -37,6 +39,7 @@
           "createtime": "1小时前",
           "companytype": "优质兼职",
           "salary": "365元/日",
+          "issuccess": 0,
           "type": "long"
         },
         {
@@ -48,6 +51,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 0,
           "type": "home"
         },
         {
@@ -59,6 +63,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 1,
           "type": "home"
         },
         {
@@ -70,6 +75,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 1,
           "type": "college"
         },
         {
@@ -81,6 +87,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 1,
           "type": "college"
         },
         {
@@ -92,6 +99,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 1,
           "type": "short"
         },
         {
@@ -103,6 +111,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 0,
           "type": "short"
         },
         {
@@ -114,6 +123,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 2,
           "type": "long"
         },
         {
@@ -125,6 +135,7 @@
           "createtime": "1小时前",
           "companytype": "优质兼职",
           "salary": "365元/日",
+          "issuccess": 2,
           "type": "long"
         },
         {
@@ -136,6 +147,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 0,
           "type": "home"
         },
         {
@@ -147,6 +159,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 1,
           "type": "home"
         },
         {
@@ -158,6 +171,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 1,
           "type": "college"
         },
         {
@@ -169,6 +183,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 2,
           "type": "college"
         },
         {
@@ -180,6 +195,7 @@
           "createtime": "1小时前",
           "companytype": "品牌企业",
           "salary": "365元/日",
+          "issuccess": 0,
           "type": "short"
         }
       ]

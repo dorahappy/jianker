@@ -31,7 +31,7 @@ export default {
 		}
 	},
 	mounted(){
-		fetch("http://localhost:5000/api/position/list")
+		fetch("/static/mock/posList.json")
 			.then((response)=>response.json())
 			.then((res)=>{
 				this.list = res.data.subjects

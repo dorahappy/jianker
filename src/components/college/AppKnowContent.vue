@@ -27,7 +27,7 @@ export default {
         }
     },
     mounted(){
-        fetch("http://localhost:5000/api/position/ptCircle")
+        fetch("/static/mock/partTime.json")
             .then((response)=>response.json())
             .then((res)=>{
                 this.contentList = res.data.contentList

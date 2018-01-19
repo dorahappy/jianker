@@ -26,8 +26,7 @@ export default {
             this.isNavShow = false
         },
         routeChange(){
-            console.log('routeChange')
-            if(this.$route.path=='/register'||this.$route.path=='/login'||this.$route.path=='/detail'||this.$route.path=='/city'||this.$route.path=='/college/love'||this.$route.path=='/register/agree'||this.$route.path=='/mine/aboutmine'||this.$route.path=='/college/publish'||this.$route.path=='/message/show'){
+            if(this.$route.path=='/register'||this.$route.path=='/login'||this.$route.path=='/detail'||this.$route.path=='/city'||this.$route.path=='/college/love'||this.$route.path=='/register/agree'||this.$route.path=='/mine/aboutmine'||this.$route.path=='/college/publish'||this.$route.path=='/message/show'||this.$route.path=='/mine/delivery'||this.$route.path=='/mine/integral'||this.$route.path=='/mine/install'||this.$route.path=='/signIn'){
                 this.NavHide()
             }else{
                 this.NavShow()

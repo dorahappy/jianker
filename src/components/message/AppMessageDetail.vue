@@ -29,7 +29,7 @@ export default {
     	}
 	},
 	mounted(){
-		fetch("http://localhost:5000/api/user/message")
+		fetch("/static/mock/message.json")
 			.then((response)=>response.json())
 			.then((res)=>{
 				res.data.subjects.forEach(item=>{

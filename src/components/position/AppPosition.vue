@@ -44,7 +44,7 @@ export default {
     	}
     },
    mounted(){
-    fetch("http://localhost:5000/api/position/city")
+    fetch("/static/mock/positionCity.json")
         .then((response)=>response.json())
         .then((res)=>{
         	this.cities = res.data.China

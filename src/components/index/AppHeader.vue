@@ -14,7 +14,7 @@
 				</div>
 			</div>
 			
-			<div class="daytime">
+			<div class="daytime" @click="toSignIn">
 				签到
 			</div>
 		</div>
@@ -27,6 +27,9 @@ export default {
 	methods:{
 		toCity(){
 			this.$router.push({name:'city'})
+		},
+		toSignIn(){
+			this.$router.push({name:'signIn'})
 		}
 	},
 	computed: {
