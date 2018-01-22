@@ -1,15 +1,16 @@
 <template>
     <div class="app-mine-login">
+    	
         <div class="app-mine-login-img">
         	<div class="userimg">
-        		<img src="/static/img/message/img_01.jpg" alt="" v-if="isShow"/>
+        		<img :src="'http://10.9.166.67:5000'+userinfo.icon" alt="" v-if="isShow"/>
         	</div>
         	<div class="login">
         		<router-link :to="{name:'login'}" tag="span">登录</router-link>
         		<span>/</span>
         		<router-link :to="{name:'register'}" tag="span">注册</router-link>
         	</div>
-        	<div class="loginInfo">{{userMsg.userEmail}}</div>
+        	<div class="loginInfo" v-if="isShow">{{userinfo.username}}</div>
         	
         </div>
         <router-view></router-view>
@@ -24,12 +25,14 @@
 
 <script>
 import {mapState} from 'vuex'
+import bus from '../../modules/bus'
 export default {
     name: 'app-mine-login',
   	computed: mapState(['userMsg']),
   	data:function(){
   		return{
-  			isShow:false
+  			isShow: false,
+			userinfo: ''
   		}
   		
   	},
@@ -39,13 +42,21 @@ export default {
 		}
   		
   	},
-  	created(){
-  		console.log(this.userMsg.userEmail)
-  			if(this.userMsg.userEmail != undefined)(
-  				this.isShow = true
-  		)
-  		
-  	}
+	mounted(){
+		bus.$on('changeisshow', function(){
+			console.log('changeisshow')
+			this.isShow = false
+		}.bind(this))
+		
+		if(localStorage.userinfo){
+			this.userinfo = JSON.parse(localStorage.userinfo)
+			this.isShow = true
+		}else{
+			this.userinfo = ''
+			this.isShow = false
+		}
+		
+	},
   	
 }
 </script>

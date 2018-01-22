@@ -5,7 +5,7 @@
             <p>注册</p>
             <i class="yo-ico">&#xf07f;</i>
         </div>
-        <form @submit.prevent = 'register(user)' class="form-reg">
+        <form @submit.prevent = 'function(){}' class="form-reg">
 	        <div class="app-form">
 	        	<label for="email" class="inp-title">账号</label>
 	        	<input v-model="user.email" @blur.prevent="table_judge1(user.email)"  type="text" id="email" placeholder="请输入账号或邮箱地址"/>
@@ -25,7 +25,7 @@
                 <router-view></router-view>
                 <p class="protocol">我已经阅读并同意<a @click="jumpToAgree()">兼客儿用户协议</a></p>
             </div>
-            <input type="submit" @click="registerInfo({userEmail:user.email,userPassword:user.password1})" value="立即注册">
+            <input type="submit" @click="registerInfo({tel:user.email,password:user.password1})" value="立即注册">
 	    </form>
     </div>
 </template>
@@ -39,7 +39,7 @@ export default {
    
     data:function(){
         return {
-        	user:{ischecked:false,email:'',password1:'',password2:'',isShow:false,errormessage:'',argee:''}
+        	user:{ischecked:false,email:'',password1:'',password2:'',isShow:false,errormessage:'',argee:''},
             
         }
     },
@@ -55,9 +55,10 @@ export default {
     		let arr = localStorage.userMsg ? JSON.parse(localStorage.userMsg) : []
 	          arr.push(params)
 	          localStorage.userMsg = JSON.stringify(arr)
+	          this.register(params)
     	},
       table_judge1(user){
-          let reg = /(^\w+(\.[a-z]{2,3})?(\.[a-z]{2,3})$)|([0-9]{6,11})/
+          let reg = /(^\w+(\.[a-z]{2,3})?(\.[a-z]{2,3})$)|([0-9]{6,11})$/
           
           if(reg.test(this.user.email)){
 	              this.user.isShow=false
@@ -74,7 +75,7 @@ export default {
             
         },
          table_judge2(user){
-            let reg = /^[a-z,A-Z,0-9]{6,20}/
+            let reg = /^[a-z,A-Z,0-9]{6,20}$/
             if(reg.test(this.user.password1)){
                 this.user.isShow=false
             }else{
@@ -114,21 +115,16 @@ export default {
         },
        register(user){
             let that =this
-            if(that.user.password1==false||that.user.email==false||that.user.ischecked==false){
-                return false
-        	}
-            axios.get('/static/mock/register.json',{params:{password1:that.password1,email:that.email}}).then((res)=>{
-                
-                if(res.data.code==0){
-                    //跳转
-                    Toast('注册成功')
+//          if(that.user.password1==false||that.user.email==false||that.user.ischecked==false){
+//              return false
+//      	}
+            axios.post('http://localhost:5000/user/api/user/register', user).then((res)=>{
+                console.log(111, res)
+                if(res.data.State){
+                    Toast(res.data.errmsg)
                     that.$router.replace({name:'login'}) 
-                }else if(res.data.code==1){
-                    Toast('账号已存在')
-                }else if(res.data.code==2){
-                    Toast('')
-                }else if(res.data.code==3){
-                    Toast('邮箱已注册')
+                }else{
+                    Toast(res.data.errmsg)
                 }
             })
             

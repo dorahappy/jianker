@@ -31,7 +31,7 @@ export default {
 			this.$router.push({name: 'integral'})
 		},
 		toInstall(){
-			this.$router.push({name: 'install'})
+			this.$router.replace({name: 'install'})
 		},
 		jumpToMineCollect(){
     		this.$router.push({path:'/mine/minecollect'})

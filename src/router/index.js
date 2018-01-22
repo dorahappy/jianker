@@ -68,8 +68,7 @@ export default new Router({
         {path:"aboutmine",name:"aboutmine",component:AppAboutMe},
         {path:"delivery",name:"delivery",component:AppDelivery},
         {path:"integral",name:"integral",component:AppIntegral},
-        {path:"install",name:"install",component:AppInstall}
-
+        {path:"install", name:"install",component:AppInstall}
       ]
     },
     {

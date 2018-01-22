@@ -1,7 +1,7 @@
 <template>
     <div class="app-login">
         <div class="login-content">
-            <form @submit.prevent = 'login(email,password)'>
+            <form @submit.prevent = 'function(){}'>
             	 <div class="app-form">
 			        <p class="inp-icon">
 			            <span></span>
@@ -28,7 +28,7 @@
                     <p class="protocol">自动登录</p>
                 </div>
             </div>
-            <input type="submit" value="登录" @click="login('',{userEmail:userInfo.userEmail,userPassword:userInfo.userPassword})"/>
+            <input type="submit" value="登录" @click="login('',{accouter:userInfo.userEmail,password:userInfo.userPassword})"/>
             <p class="forget-pass">忘记密码?</p>
             <ul class="login-look">
                 <li @click="toRegister">立即注册</li>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+	import axios from 'axios'
 	import { Toast } from 'mint-ui'
 	import { mapState, mapMutations } from 'vuex'
 export default {
@@ -60,31 +61,21 @@ export default {
     	login(e,params){
     		let that = this
             var userMsg = JSON.parse(localStorage.userMsg)
-      		for (var i = 0; i < userMsg.length; i++) {
-        		if (userMsg[i].userEmail === params.userEmail && userMsg[i].userPassword === params.userPassword) {
-          			Toast({
-	           			 message: '登录成功',
-	            		 duration: 1000
-          			})
-		       this.setInfo(params)
-          		that.$router.replace({name:'mine'})
-          		break
-          		
-        	}
-      }
-      if (i === userMsg.length) {
-        Toast({
-          message: '登录失败',
-          duration: 1000
-        })
-      }
+            axios.post('http://localhost:5000/user/api/user/login', params).then((res)=>{
+                console.log(111, res)
+                if(res.data.State){
+                	that.$router.push({name: 'mine'})
+                	localStorage.userinfo = JSON.stringify(res.data.data)
+                }
+            })
+      
     },
-        toHome(){
-            this.$router.push({name:'home'})
-        },
-        toRegister(){
-            this.$router.push({name:'register'})
-        }
+    toHome(){
+        this.$router.push({name:'home'})
+    },
+    toRegister(){
+        this.$router.push({name:'register'})
+    }
     },
     computed: {
     	...mapState(['userMsg'])

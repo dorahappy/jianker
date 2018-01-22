@@ -36,8 +36,8 @@ export default {
 	mounted(){
 		fetch("/static/mock/posList.json")
 			.then((response)=>response.json())
-			
 			.then((res)=>{
+				console.log(res)
 				this.list = res.data.subjects
 				this.list.map((item, i)=>{
 					switch(item.postype){
@@ -71,7 +71,6 @@ export default {
 					}
 				})
 			})
-		
 	},
 	
 	

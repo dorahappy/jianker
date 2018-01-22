@@ -10,7 +10,7 @@ const state = {
     city: '北京',
     isLogin: false,
     partList: [],
-    userMsg: {},
+    isShow: localStorage.userinfo?true:false,
     collect:[],
     partTime:[]
 }

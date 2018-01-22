@@ -3,7 +3,6 @@
         <AppMineHead></AppMineHead>
         <AppMineLogin></AppMineLogin>
         <AppMineNav></AppMineNav>
-       
     </div>
 </template>
 
@@ -13,10 +12,14 @@
 	import AppMineNav from './AppMineNav'
 export default {
     name: 'app-mine',
+    data:function(){
+    	return {
+    		
+    	}
+    },
     components:{
     	AppMineHead,AppMineLogin,AppMineNav
-    }
-
+    },
 }
 </script>
 

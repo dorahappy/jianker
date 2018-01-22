@@ -1,7 +1,10 @@
 .app-mine-login{
     height:190px;
     background:#fff;
-    
+    .msg-hide{
+        position: absolute;
+        top: -100px;
+    }
     .app-mine-login-img{
         display:flex;
         height:90px;

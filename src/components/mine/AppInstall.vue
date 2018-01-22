@@ -10,11 +10,12 @@
                 <li><p>修改密码</p><i class="yo-ico">&#xf07f;</i></li>
             </ul>
         </div>
-        <p class="exit">退出登录</p>
+        <p class="exit" @click="exit">退出登录</p>
     </div>
 </template>
 
 <script>
+	import bus from '../../modules/bus'
 export default {
     name: 'app-integral',
     components: {
@@ -28,6 +29,11 @@ export default {
     methods: {
         toMine(){
             this.$router.push({name: 'mine'})
+        },
+        exit(){
+        	localStorage.removeItem('userinfo')
+        	bus.$emit('changeisshow', null)
+        	this.$router.replace({name: 'mine'})
         }
     },
     mounted(){
