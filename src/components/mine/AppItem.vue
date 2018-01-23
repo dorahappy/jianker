@@ -1,5 +1,5 @@
 <template>
-    <li class="app-item">
+    <li class="app-item" @click="todetail(value.id)">
         <ul>
             <li :class="[value.className]">{{value.postype}}</li>
             <li>
@@ -17,7 +17,9 @@ export default {
     name: 'app-item',
     props: ['value'],
     methods: {
-        
+        todetail(id){
+            this.$router.push({name:'detail', query:{id}})
+        }
     }
   
 }

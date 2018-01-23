@@ -74,7 +74,7 @@ export default {
             
         },
          table_judge2(user){
-            let reg = /^[a-z,A-Z,0-9]{6,20}/
+            let reg = /^[a-z,A-Z,0-9]{6,20}$/
             if(reg.test(this.user.password1)){
                 this.user.isShow=false
             }else{

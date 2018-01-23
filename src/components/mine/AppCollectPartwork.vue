@@ -1,6 +1,6 @@
 <template>
 	<div class="app-collect-partwork">
-		<div class="app-know-content" v-for="item of partTime" :key="item.id" v-show="isHide">
+		<div class="app-know-content" v-for="item of partTime" :key="item.id" v-show="isHide" @click="toparttime">
             <div class="user_info"><img :src="item.imgUrl" alt=""></div>
             <div class="list_content">
                 <div class="content_title">
@@ -36,7 +36,12 @@ export default{
 				this.isHide = true
 			}
 		
-	},
+    },
+    methods:{
+        toparttime(){
+			this.$router.push({name: 'love'})
+		}
+    },
 	computed:{
 		...mapState(['partTime'])
 	},

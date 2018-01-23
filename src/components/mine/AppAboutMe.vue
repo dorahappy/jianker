@@ -75,10 +75,10 @@ export default{
 	}
 	.app-content{
 		width:100%;
-		margin:0 0.1rem;
 		padding-bottom:0.35rem;
 		border-bottom:1px solid #E5E5E5 ;
 		p{
+			padding:0 0.1rem;
 			font-size:12px;
 			color:#333;
 			

@@ -2,7 +2,7 @@
 	<div class="app-collect-parttime">
 		<div class="content" v-show='isShow'>
 			<ul>
-		       <li v-for="coll in collect" :key="coll.id">
+		       <li v-for="coll in collect" :key="coll.id" @click="todetail(coll.id)">
 		          <ul>
 		            <li :class="[coll.className]">{{coll.postype}}</li>
 		            <li>
@@ -32,7 +32,12 @@ export default{
 	computed:{
 		...mapState(['collect'])
 	},
-	
+	methods:{
+		todetail(id){
+            this.$router.push({name: 'detail', query: {id}})
+        }
+	}
+	,
 	created(){
 		if(this.collect.length != 0){
 				this.isShow = true
